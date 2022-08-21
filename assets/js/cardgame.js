@@ -58,6 +58,7 @@ function createGameArea() {
         const createPlayerCard = document.createElement("img")
         createPlayerCard.setAttribute("src", "assets/images/front-card-face.fw.png")  
         createPlayerCard.setAttribute("data-id", i)                             /**adding a data-id attribute so we can call on it later  **/
+        card.addEventListener("click", turnCard())            /**event listener for click, and the call back function turnCard is processed on "click"*/
         cardGameArea.appendChild(createPlayerCard)
         
     }
@@ -65,3 +66,7 @@ function createGameArea() {
 }
 
 createGameArea();
+console.log ("clicked")
+function turnCard() {
+
+}
