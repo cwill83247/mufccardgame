@@ -57,16 +57,17 @@ function createGameArea() {
     for (let i =0; i <12; i++) {     /*Start of for loop    **/
         const createPlayerCard = document.createElement("img")
         createPlayerCard.setAttribute("src", "assets/images/front-card-face.fw.png")  
-        createPlayerCard.setAttribute("data-id", i)                             /**adding a data-id attribute so we can call on it later  **/
-        card.addEventListener("click", turnCard())            /**event listener for click, and the call back function turnCard is processed on "click"*/
+        createPlayerCard.setAttribute("card-id", i)                             /**adding a data-id attribute so we can call on it later  **/
+        createPlayerCard.addEventListener("click", turnCard)            /**event listener for click, and the call back function turnCard is processed on "click"*/
         cardGameArea.appendChild(createPlayerCard)
         
     }
 
 }
 
-createGameArea();
-console.log ("clicked")
-function turnCard() {
+createGameArea()
 
+function turnCard() {
+    const selectedCardId = this.getAttribute("card-id")           /**get the id of the card that has been clicked using "card-id" */
+    console.log ("click",selectedCardId)
 }
