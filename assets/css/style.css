@@ -8,3 +8,16 @@ body {
     height : 100vh;  /**100% of available height **/
     background-color: #DA291C; /** man utd RED color **/
 }
+#card-game-area {
+    margin:1px;
+    border:2px solid antiquewhite;   /**TEMP just to show area of card game - need to add border, spacing and styles to EACH Card **/
+    width: auto;
+    height:auto;
+    /** add flex styling so only 3 or 4 cards per row ,also use  flex space-between to evenly space cards --- **/
+    
+    
+}
+.player-card {  /**add styling to teach card **/
+    margin:2px;   /*** CHANGE THIS SO RESPONSIVE **/
+
+}
