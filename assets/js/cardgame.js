@@ -51,10 +51,11 @@ const playerCards = [                  /**Array of all the Cards only 6 unique c
 ] /**end of playerCards Array  */
 playerCards.sort (()=> 0.5 - Math.random())        /**this is randomising the order in which the cards display by putting them at different index points in the array **/
 
+const selectedCards = []    /**empty array to hold the cards player has clicked so can compare */ 
 const cardGameArea = document.querySelector("#card-game-area")
 
 function createGameArea() {
-    for (let i =0; i <12; i++) {     /*Start of for loop    **/
+    for (let i =0; i <12; i++) {     /*Start of for loop   i is the index number of the array **/
         const createPlayerCard = document.createElement("img")
         createPlayerCard.setAttribute("src", "assets/images/front-card-face.fw.png")  
         createPlayerCard.setAttribute("card-id", i)                             /**adding a data-id attribute so we can call on it later  **/
@@ -69,5 +70,8 @@ createGameArea()
 
 function turnCard() {
     const selectedCardId = this.getAttribute("card-id")           /**get the id of the card that has been clicked using "card-id" */
+    console.log (playerCards[selectedCardId].playerName)     /**passing in selectedcardid into the array and logging the playerName so can compare later */
     console.log ("click",selectedCardId)
+    selectedCards.push(playerCards[selectedCardId].playerName)       /**pushing whatever card(s) we select and adding the playername into our selectedCards array  need to do compare after 2 clicks  */
+    console.log(selectedCards)
 }
