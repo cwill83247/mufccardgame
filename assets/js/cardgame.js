@@ -103,7 +103,6 @@ function checkIfMatch () {        /**moved to a function as need to call it mult
         console.log(score)
         cards[selectedCardsId[0]].removeEventListener("click",turnCard)  
         cards[selectedCardsId[1]].removeEventListener("click",turnCard)  
-
         //*cards[selectedCards[1]].removeEventListener("click",turnCard)   **/
 
         }else 
