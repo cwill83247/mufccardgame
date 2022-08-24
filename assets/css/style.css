@@ -11,10 +11,10 @@ body {
 #card-game-area {
     margin:1px;
     border:2px solid antiquewhite;   /**TEMP just to show area of card game - need to add border, spacing and styles to EACH Card **/
-    width: auto;
+    width: 800px;
     height:auto;
     display:flex;
-    flex-wrap:nowrap;
+    flex-wrap:nowrap; 
     /** add flex styling so only 3 or 4 cards per row ,also use  flex space-between to evenly space cards --- **/
     
     
