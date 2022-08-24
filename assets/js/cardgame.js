@@ -1,3 +1,4 @@
+var score =0;
 const playerCards = [                  /**Array of all the Cards only 6 unique cards needed as will be having 12 in total too match */
     {
         playerName:"Cantona",
@@ -54,6 +55,11 @@ playerCards.sort (()=> 0.5 - Math.random())        /**this is randomising the or
 const selectedCards = []    /**empty array to hold the cards player has clicked so can compare */ 
 const cardGameArea = document.querySelector("#card-game-area")
 
+function playerScore() {
+
+    score = +1;
+}
+
 function createGameArea() {
     for (let i =0; i <12; i++) {     /*Start of for loop   i is the index number of the array **/
         const createPlayerCard = document.createElement("img")
@@ -78,9 +84,12 @@ function turnCard() {
         
         if (selectedCards.length ===2) {   /**do we have 2 cards in our selectedCards Array */
             console.log ("is this part working")
-            /** if(selectedCards[0].playerName == selectedCards[1].playerName) {    - dont need to specify playerName as pushing the name into the Array and only info in the array is an id and the playersname **/        
+            /** if(selectedCards[0].playerName == selectedCards[1].playerName) {    - dont need to specify playerName as pushing the name into the SelectedCards Array and only info in the array is an id and the playersname **/        
             if(selectedCards[0] == selectedCards[1]) {
             console.log("its a match")
+            playerScore()
+            console.log(score)
+            selectedCards[0].removeEventListener("click",turnCard);
              }else 
              {
                console.log ("no match or not working")
