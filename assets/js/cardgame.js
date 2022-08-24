@@ -74,4 +74,5 @@ function turnCard() {
     console.log ("click",selectedCardId)
     selectedCards.push(playerCards[selectedCardId].playerName)       /**pushing whatever card(s) we select and adding the playername into our selectedCards array  need to do compare after 2 clicks  */
     console.log(selectedCards)
+    this.setAttribute("src",playerCards[selectedCardId].playerImage)   /**set src image attribute , by using the selected card id, putting that into our array which then finds the image url */
 }
