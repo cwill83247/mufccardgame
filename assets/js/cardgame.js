@@ -75,4 +75,16 @@ function turnCard() {
     selectedCards.push(playerCards[selectedCardId].playerName)       /**pushing whatever card(s) we select and adding the playername into our selectedCards array  need to do compare after 2 clicks  */
     console.log(selectedCards)
     this.setAttribute("src",playerCards[selectedCardId].playerImage)   /**set src image attribute , by using the selected card id, putting that into our array which then finds the image url */
+        
+        if (selectedCards.length ===2) {   /**do we have 2 cards in our selectedCards Array */
+            console.log ("is this part working")
+            /** if(selectedCards[0].playerName == selectedCards[1].playerName) {    - dont need to specify playerName as pushing the name into the Array and only info in the array is an id and the playersname **/        
+            if(selectedCards[0] == selectedCards[1]) {
+            console.log("its a match")
+             }else 
+             {
+               console.log ("no match or not working")
+            }
+    
+}
 }
