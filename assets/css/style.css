@@ -7,19 +7,25 @@
 body {
     height : 100vh;  /**100% of available height **/
     background-color: #DA291C; /** man utd RED color **/
+    display:flex;
 }
 #card-game-area {
+    display: grid;
+    grid-template-columns: repeat(4,20rem);
+    grid-template-rows: repeat(3,20rem);
     margin:1px;
     border:2px solid antiquewhite;   /**TEMP just to show area of card game - need to add border, spacing and styles to EACH Card **/
-    width: 800px;
-    height:auto;
-    display:flex;
-    flex-wrap:nowrap; 
-    /** add flex styling so only 3 or 4 cards per row ,also use  flex space-between to evenly space cards --- **/
     
     
 }
 .player-card {  /**add styling to teach card **/
-    margin:2px;   /*** CHANGE THIS SO RESPONSIVE **/
+     /*** CHANGE THIS SO RESPONSIVE **/
+    width:100%;
+    height:100%
+
+}
+img {
+
+border:1px solid black;
 
 }

@@ -1,4 +1,9 @@
-var score =0;
+let score = 0;
+const scoreCount = document.querySelector("#score-area");
+
+scoreCount.textContent = score;
+
+//cards Array
 const playerCards = [                  /**Array of all the Cards only 6 unique cards needed as will be having 12 in total too match */
     {
         playerName:"Cantona",
@@ -50,6 +55,8 @@ const playerCards = [                  /**Array of all the Cards only 6 unique c
     }
 
 ] /**end of playerCards Array  */
+
+//shuffle Cards
 playerCards.sort (()=> 0.5 - Math.random())        /**this is randomising the order in which the cards display by putting them at different index points in the array **/
 
 let selectedCards = []    /**empty array to hold the cards player has clicked so can compare */ 
@@ -58,7 +65,9 @@ const cardGameArea = document.querySelector("#card-game-area")
 
 function playerScore() {
 
-    score = +1;
+    const previousScore = score;
+    const newScore = previousScore +1;
+    scoreCount.textContent = newScore;
 }
 
 function createGameArea() {
@@ -68,7 +77,8 @@ function createGameArea() {
         createPlayerCard.setAttribute("card-id", i)                             /**adding a data-id attribute so we can call on it later  **/
         createPlayerCard.addEventListener("click", turnCard)            /**event listener for click, and the call back function turnCard is processed on "click"*/
         cardGameArea.appendChild(createPlayerCard)
-        
+
+                
     }
 
 }
@@ -103,7 +113,7 @@ function checkIfMatch () {        /**moved to a function as need to call it mult
         console.log(score)
         cards[selectedCardsId[0]].removeEventListener("click",turnCard)  
         cards[selectedCardsId[1]].removeEventListener("click",turnCard)  
-        //*cards[selectedCards[1]].removeEventListener("click",turnCard)   **/
+        //*cards[selectedCards[1]].removeEventListener("click",turnCard)   needs to be the ID of the card --- for remove.event listener to work..**/
 
         }else 
         {
