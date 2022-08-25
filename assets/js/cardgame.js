@@ -65,9 +65,12 @@ const cardGameArea = document.querySelector("#card-game-area")
 
 function playerScore() {
 
-    const previousScore = score;
-    const newScore = previousScore +1;
-    scoreCount.textContent = newScore;
+    score = score +1
+    const newScore = score
+    console.log("new score:"+ newScore)
+    document.getElementById("score-area").innerHTML = ("Cards Matched:" +newScore);
+
+    
 }
 
 function createGameArea() {
@@ -101,7 +104,8 @@ function turnCard() {
     }
 }
                                                          
-   
+ //checking for a Match
+
 function checkIfMatch () {        /**moved to a function as need to call it multiple times  */
     /***   dont need this as added to turncard if (selectedCards.length ===2) {   /**do we have 2 cards in our selectedCards Array */
         
@@ -122,16 +126,21 @@ function checkIfMatch () {        /**moved to a function as need to call it mult
             console.log ("no match or not working")
             console.log(this)              /**handy to see what is being logged when using this ***/
             console.log(selectedCards)   
-           /**need a delay before flipping cards back **/
-            cards[selectedCardsId[0]].setAttribute("src", "assets/images/front-card-face.fw.png")  /**doesnt work saying its not a function */
-            cards[selectedCardsId[1]].setAttribute("src", "assets/images/front-card-face.fw.png")  /**doesnt work saying its not a function */
+           /**need a delay before flipping cards back ideally adjustable so can add LEVELS **/
+            cards[selectedCardsId[0]].setAttribute("src", "assets/images/front-card-face.fw.png")  /**doesnt work saying its not a function had to change to cardsId */
+            cards[selectedCardsId[1]].setAttribute("src", "assets/images/front-card-face.fw.png")  /**doesnt work saying its not a function had to change to cardsId  */
 
-            console.log("here in the script")
+            console.log("I am here in the script")
             
         }
         selectedCards =[]                       //**setting Selected Cards back to blank NOT WORKING  **/
         selectedCardsId =[]  
         console.log (selectedCards)
+
+        // checking if all cards have been matched
+        if (score == playerCards.length/2)     /** maybe change score to cardsMatched or something more meaningful */
+        console.log("All Cards Matched")    /**use textContent or innerhtml to write this back to html **/  
+
  }
 
 
