@@ -13,7 +13,8 @@ body {
     display: grid;
     grid-template-columns: repeat(4,20rem);
     grid-template-rows: repeat(3,20rem);
-    margin:1px;
+    grid-column-gap: 2px;
+    /**margin:1px; **/
     border:1px solid antiquewhite;   /**TEMP just to show area of card game - need to add border, spacing and styles to EACH Card **/
     perspective: 800px;   /**??**/
     
@@ -22,8 +23,12 @@ body {
      /*** CHANGE THIS SO RESPONSIVE **/
     width:100%;
     height:100%;
-    border: 4px solid blue;
-    transform-style:preserve-3d; //**??? ***/ 
+    border: 0.5px solid black;
+    transform-style:preserve-3d; /**??? ***/ 
+    border-radius: 25px;
+    background: #DA291C;
+    padding: 20px;
+    margin:4px;
 
 }
 img {

@@ -1,5 +1,27 @@
-let score = 0;
+let score = 0;         /**let as needs ot be changeable  */
 const scoreCount = document.querySelector("#score-area");
+
+let countdownTimer = 10;  /**changed to 10 seconds for testing */
+const timer = setInterval(decreaseCounter, 1000); /*put it inside the decrease counter but doh it was calling itself */
+
+function decreaseCounter(){
+       /**!!!!!!!!!ONLY want this to run when game starts */                  /**had to set this as a variable so can use the clearInteval to stop negative numbers */
+
+    const countdownElement =document.getElementById("countdown-timer")
+    console.log(countdownTimer)
+    countdownElement.textContent = ("Countdown Timer: " + countdownTimer)
+    countdownTimer = countdownTimer -1;
+    
+    if (countdownTimer < 0) { //stop the setInterval when at 0
+     console.log ("you have run out of time")   //need to stop user being able to play the game .. so remove event listener maybe and then a message start new game...
+     clearInterval(timer)
+     countdownElement.textContent = ("Sorry you have run out of time")  /**POSSIBLE DO THIS in Timer Area dependant on formatting */
+     /**createPlayerCard.removeEventListener("click", turnCard)   DOESNT WORK ? **/  
+
+
+    }
+
+}
 
 scoreCount.textContent = score;
 
@@ -63,6 +85,7 @@ let selectedCards = []    /**empty array to hold the cards player has clicked so
 let selectedCardsId = [] /*** creating empty array to hold the actual ID of !!!!!!! */
 const cardGameArea = document.querySelector("#card-game-area")
 
+//keep the score and update index page
 function playerScore() {
 
     score = score +1
@@ -73,6 +96,7 @@ function playerScore() {
     
 }
 
+//create the inital game and add cards to the game area 
 function createGameArea() {
     for (let i =0; i <12; i++) {     /*Start of for loop   i is the index number of the array **/
         const createPlayerCard = document.createElement("img")
@@ -82,13 +106,15 @@ function createGameArea() {
         createPlayerCard.addEventListener("click", turnCard)            /**event listener for click, and the call back function turnCard is processed on "click"*/
         
         cardGameArea.appendChild(createPlayerCard)             /**adding each card to my player area */
+        
 
                 
     }
 
 }
 
-createGameArea()
+createGameArea() 
+decreaseCounter() /**invoke timer */
 
 function turnCard() {
     const selectedCardId = this.getAttribute("card-id")           /**get the id of the card that has been clicked using "card-id" */
@@ -126,24 +152,24 @@ function checkIfMatch () {        /**moved to a function as need to call it mult
             console.log ("no match or not working")
             console.log(this)              /**handy to see what is being logged when using this ***/
             console.log(selectedCards)   
-           /**need a delay before flipping cards back ideally adjustable so can add LEVELS **/
-            cards[selectedCardsId[0]].setAttribute("src", "assets/images/front-card-face.fw.png")  /**doesnt work saying its not a function had to change to cardsId */
-            cards[selectedCardsId[1]].setAttribute("src", "assets/images/front-card-face.fw.png")  /**doesnt work saying its not a function had to change to cardsId  */
+    /**need a delay before flipping cards back ideally adjustable so can add LEVELS **/
+          
 
-            console.log("I am here in the script")
+           cards[selectedCardsId[0]].setAttribute("src", "assets/images/front-card-face.fw.png")  /**doesnt work saying its not a function had to change to cardsId */
+           cards[selectedCardsId[1]].setAttribute("src", "assets/images/front-card-face.fw.png")  /**doesnt work saying its not a function had to change to cardsId  */
+
+           console.log("I am here in the script")
             
         }
         selectedCards =[]                       //**setting Selected Cards back to blank NOT WORKING  **/
         selectedCardsId =[]  
         console.log (selectedCards)
 
-        // checking if all cards have been matched
+    // checking if all cards have been matched
+  
         if (score == playerCards.length/2)     /** maybe change score to cardsMatched or something more meaningful */
         console.log("All Cards Matched")    /**use textContent or innerhtml to write this back to html **/  
 
- }
-
-
-
-
-
+    }
+    
+    document.getElementById("new-game").addEventListener("click",createGameArea())
