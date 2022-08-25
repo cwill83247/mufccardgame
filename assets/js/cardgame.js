@@ -73,10 +73,12 @@ function playerScore() {
 function createGameArea() {
     for (let i =0; i <12; i++) {     /*Start of for loop   i is the index number of the array **/
         const createPlayerCard = document.createElement("img")
+        createPlayerCard.classList.add("player-card")                          /**adding CSS Class so we can style card  ****/
         createPlayerCard.setAttribute("src", "assets/images/front-card-face.fw.png")  
         createPlayerCard.setAttribute("card-id", i)                             /**adding a data-id attribute so we can call on it later  **/
         createPlayerCard.addEventListener("click", turnCard)            /**event listener for click, and the call back function turnCard is processed on "click"*/
-        cardGameArea.appendChild(createPlayerCard)
+        
+        cardGameArea.appendChild(createPlayerCard)             /**adding each card to my player area */
 
                 
     }
