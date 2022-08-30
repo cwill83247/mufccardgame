@@ -3,7 +3,7 @@ const scoreCount = document.querySelector("#score-area");
 const gameArea = document.querySelector("#card-game-area");
 
 let countdownTimer = 10;  /**changed to 10 seconds for testing */
-const timer = setInterval(decreaseCounter, 1000); /*put it inside the decrease counter but doh it was calling itself */
+const timer = setInterval(decreaseCounter, 1000); /*put it inside the decrease counter but doh it was calling itself  HOWEVER NOW RUNNING AT START UP moved inside new game so only starts when game starts */
 
 function decreaseCounter(){
        /**!!!!!!!!!ONLY want this to run when game starts */                  /**had to set this as a variable so can use the clearInteval to stop negative numbers */
@@ -13,6 +13,8 @@ function decreaseCounter(){
     countdownElement.textContent = ("Countdown Timer: " + countdownTimer)
     countdownTimer = countdownTimer -1;
     
+
+    // this part is affecting my new game function when gets to 0 timer has been cleared do i just reset as aprt of new game ??  
     if (countdownTimer < 0) { //stop the setInterval when at 0
      console.log ("you have run out of time")   //need to stop user being able to play the game .. so remove event listener maybe and then a message start new game...
      clearInterval(timer)
@@ -115,7 +117,7 @@ function createGameArea() {
 }
 
 /*createGameArea()  */   - /** this loads the game on start up   not sure want to do it like that may work better if have a start button  **/
-decreaseCounter() /**invoke timer **/
+decreaseCounter() /**WHY DOES REMOVING THIS GIVE ME a turnCard Undefined error --?  invoke timer is it really as time starts without it  ??? **/
 
 function turnCard() {
     const selectedCardId = this.getAttribute("card-id")           /**get the id of the card that has been clicked using "card-id" */
@@ -176,9 +178,12 @@ function checkIfMatch () {        /**moved to a function as need to call it mult
    function startNewGame () {  
     playerCards.sort (()=> 0.5 - Math.random())  //every new game it needs to randomize.... 
     gameArea.innerHTML = "";  //clear existing game area  
+    score = 0;
     scoreCount.innerHTML ="";  
-    countdownTimer = 80;    //used 80 so i know this part is owrking 
-    decreaseCounter(); /***NOT WORKING IF TIME RUNS OUT  */
+    countdownTimer = 20;    //used 20 so i know this part is working POSSIBLY VARIABLE FOR LEVELS 30, 60, 90 Seconds 
+    
+
+    decreaseCounter() /***NOT WORKING IF TIME RUNS OUT  */
     console.log ("start button clicked") // works however not creating a new game...  do I need to refresh canvas or turn all cards back, ideally want to do a shuffle as well..  ??
     
     createGameArea();
