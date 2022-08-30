@@ -1,5 +1,6 @@
 let score = 0;         /**let as needs ot be changeable  */
 const scoreCount = document.querySelector("#score-area");
+const gameArea = document.querySelector("#card-game-area");
 
 let countdownTimer = 10;  /**changed to 10 seconds for testing */
 const timer = setInterval(decreaseCounter, 1000); /*put it inside the decrease counter but doh it was calling itself */
@@ -107,14 +108,14 @@ function createGameArea() {
         
         cardGameArea.appendChild(createPlayerCard)             /**adding each card to my player area */
         
-
+        /*** document.getElementById("new-game").addEventListener("click",createGameArea())  - every time iterates adds more cards ***/ 
                 
     }
 
 }
 
-createGameArea() 
-decreaseCounter() /**invoke timer */
+/*createGameArea()  */   - /** this loads the game on start up   not sure want to do it like that may work better if have a start button  **/
+decreaseCounter() /**invoke timer **/
 
 function turnCard() {
     const selectedCardId = this.getAttribute("card-id")           /**get the id of the card that has been clicked using "card-id" */
@@ -127,7 +128,7 @@ function turnCard() {
     this.setAttribute("src",playerCards[selectedCardId].playerImage)   /**set src image attribute , by using the selected card id, putting that into our array which then finds the image url */
     if (selectedCards.length ==2){    /*running checkmatch function if we have 2 cards  */
         checkIfMatch()               /**calling my check match function */    
-    }
+    } //other wise carry on...back round... 
 }
                                                          
  //checking for a Match
@@ -172,4 +173,14 @@ function checkIfMatch () {        /**moved to a function as need to call it mult
 
     }
     
-    document.getElementById("new-game").addEventListener("click",createGameArea())
+   function startNewGame () {  
+    playerCards.sort (()=> 0.5 - Math.random())  //every new game it needs to randomize.... 
+    gameArea.innerHTML = "";  //clear existing game area  
+    scoreCount.innerHTML ="";  
+    countdownTimer = 80;    //used 80 so i know this part is owrking 
+    decreaseCounter(); /***NOT WORKING IF TIME RUNS OUT  */
+    console.log ("start button clicked") // works however not creating a new game...  do I need to refresh canvas or turn all cards back, ideally want to do a shuffle as well..  ??
+    
+    createGameArea();
+}
+
