@@ -33,47 +33,47 @@ const playerCards = [                  /**Array of all the Cards only 6 unique c
     },
     {
         playerName:"Rooney",
-        playerImage: "/assets/images/rooney-card.fw.png",
+        playerImage: "assets/images/rooney-card.fw.png",
     },
     {
         playerName:"Scholes",
-        playerImage: "/assets/images/scholes-card.fw.png",
+        playerImage: "assets/images/scholes-card.fw.png",
     },
     {
         playerName:"Cantona",
-        playerImage: "/assets/images/test-card.png",
+        playerImage: "assets/images/test-card.png",
     },
     {
         playerName:"Cantona",
-        playerImage: "/assets/images/test-card.png",
+        playerImage: "assets/images/test-card.png",
     },
     {
         playerName:"Cantona",
-        playerImage: "/assets/images/test-card.png",
+        playerImage: "assets/images/test-card.png",
     },
     {
         playerName:"Cantona",
-        playerImage: "/assets/images/cantona-card.fw.png",
+        playerImage: "assets/images/cantona-card.fw.png",
     },
     {
         playerName:"Rooney",
-        playerImage: "/assets/images/rooney-card.fw.png",
+        playerImage: "assets/images/rooney-card.fw.png",
     },
     {
         playerName:"Scholes",
-        playerImage: "/assets/images/scholes-card.fw.png",
+        playerImage: "assets/images/scholes-card.fw.png",
     },
     {
         playerName:"Cantona",
-        playerImage: "/assets/images/test-card.png",
+        playerImage: "assets/images/test-card.png",
     },
     {
         playerName:"Cantona",
-        playerImage: "/assets/images/test-card.png",
+        playerImage: "assets/images/test-card.png",
     },
     {
         playerName:"Cantona",
-        playerImage: "/assets/images/test-card.png",
+        playerImage: "assets/images/test-card.png",
     }
 
 ] /**end of playerCards Array  */
