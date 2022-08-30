@@ -29,7 +29,7 @@ scoreCount.textContent = score;
 const playerCards = [                  /**Array of all the Cards only 6 unique cards needed as will be having 12 in total too match */
     {
         playerName:"Cantona",
-        playerImage: "/assets/images/cantona-card.fw.png",
+        playerImage: "assets/images/cantona-card.fw.png",
     },
     {
         playerName:"Rooney",
