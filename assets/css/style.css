@@ -1,4 +1,8 @@
-* {                     /**used to reset margins and padding **/
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&display=swap');
+
+
+*{                     /**used to reset margins and padding **/
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -11,13 +15,19 @@ body {
 }
 #card-game-area {
     display: grid;
-    grid-template-columns: repeat(4,20rem);
-    grid-template-rows: repeat(3,20rem);
+    grid-template-columns: repeat(4,12rem);
+    grid-template-rows: repeat(3,16rem);
     grid-column-gap: 2px;
     /**margin:1px; **/
     border:1px solid antiquewhite;   /**TEMP just to show area of card game - need to add border, spacing and styles to EACH Card **/
-    perspective: 800px;   /**??**/
     
+}
+#instructions-area {
+    display:flex;
+    flex-direction:column;
+    background-color: black;
+    color:antiquewhite;
+    font-family: "Bebas Neue";
 }
 .player-card {  /**add styling to teach card **/
      /*** CHANGE THIS SO RESPONSIVE **/
@@ -37,5 +47,51 @@ border:1px solid black;
 
 }
 #score-results-area {
-    background-color: antiquewhite;
+    background-color: #DA291C;
+}
+
+/**OVERLAY TEXT**/
+
+.overlay-text {
+    position: fixed;   /***CHECK RESPONSIVENESS **/
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color:antiquewhite;
+    font-family: "Bebas Neue";
+    font-size: 8em;
+    display:none; /**Initally Hidden **/
+
+}
+.overlay-text-small {
+    font-size:0.5em;
+    
+}
+
+.overlay-text.visible {
+    display: flex;
+    flex-direction:column;
+    animation: overlay-grow 500ms forwards;
+}
+
+@keyframes overlay-grow {
+    from {
+        background-color:rgba(0,0,0,0);
+        font-size:0;
+        }
+    to {
+        background-color:rgba(0,0,0,0.8);
+        font-size:8em;
+
+       }
+}
+@media (max-width :600px) {
+    #card-game-area {
+        grid-template-columns: repeat(3, auto);
+    }
 }

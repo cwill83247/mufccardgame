@@ -11,18 +11,39 @@
     <header>
         Header Text will go here 
     </header>
-    <section class="container-fluid">
-        <div id="score-results-area">
-       Main Content Section
-       <p id ="countdown-timer"><!--Timer part of script will insert here--> </p> 
-       <div> <button id="new-game" onclick="startNewGame()">New Game</button> </div> <!-- NOT WORKING DO I Need an EVENT LISTENER-->
-       <div id ="score-area"><p>Cards Matched:</p><span></span></div>
-       <div> Instructions Area</div>
-       </div>
-       <div id="card-game-area"> 
-       <!--Cards getting added by JS, and the styling is also assigned with JS-->
-    </div>
+    <!--<section class="container-fluid"> -->
        
+    <div id ="instructions-area">
+        <p>
+        What is Lorem Ipsum?
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+        when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+        and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p> Instructions Area
+        <div id="score-results-area">
+            Main Content Section
+            <p id ="countdown-timer"><!--Timer part of script will insert here--> </p> 
+            <div> <button id="new-game" onclick="startNewGame()">New Game</button> </div> <!-- NOT WORKING DO I Need an EVENT LISTENER-->
+            <div id ="score-area"><p>Cards Matched:</p><span></span></div>
+         </div>
+        </div>     
+       <div id="card-game-area"> 
+        
+        <div id="start-game-text" class="overlay-text">  <!--<div class="overlay-text visible">-->
+            Start
+              <!--Cards getting added by JS, and the styling is also assigned with JS-->
+        </div>   
+        <div id="game-finished-text" class="overlay-text">
+            You Matched 
+            <span class="overlay-text-small"> Click to start a new game</span>
+             
+        </div>     
+        </div>
+        
+        
         <script src ="assets/js/cardgame.js"></script>
     </section>
     <footer class="container-fluid">

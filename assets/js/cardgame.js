@@ -130,10 +130,11 @@ function turnCard() {
     console.log(selectedCards)
     console.log(selectedCardsId)
     this.setAttribute("src",playerCards[selectedCardId].playerImage)   /**set src image attribute , by using the selected card id, putting that into our array which then finds the image url */
-    if (selectedCards.length ==2){    /*running checkmatch function if we have 2 cards  */
-    //setTimeout(flipCardsBack(),3000) //or do I add the delay before the check match ???
-     setTimeout(checkIfMatch, 750);               /**calling my check match function and adding a delay so can see both cards briefly  */    
-    } //other wise carry on...back round... 
+         
+        if (selectedCards.length ==2){    /*running checkmatch function if we have 2 cards  */
+        //setTimeout(flipCardsBack(),3000) //or do I add the delay before the check match ???
+        setTimeout(checkIfMatch, 800);               /**calling my check match function and adding a delay so can see both cards briefly  */    
+        } //other wise carry on...back round... 
 }
                                                          
  //checking for a Match
