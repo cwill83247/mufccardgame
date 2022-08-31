@@ -4,7 +4,7 @@ const gameArea = document.querySelector("#card-game-area");
 let timer; //had to declare timer here to stop negative numbers when it running as part of the start game as couldnt see timer as declared.
 let countdownTimer = 10;  /**initial value - changed to 10 seconds for testing */
 let cards;
-
+const elGameFinishedText = document.getElementById("game-finished-text"); /**NOT WORKING AHHHHHHHHH */
 
 function decreaseCounter(){
        /**!!!!!!!!!ONLY want this to run when game starts */                  /**had to set this as a variable so can use the clearInteval to stop negative numbers */
@@ -20,7 +20,7 @@ function decreaseCounter(){
      console.log ("you have run out of time")   //need to stop user being able to play the game .. so remove event listener maybe and then a message start new game...
      clearInterval(timer)
      countdownElement.textContent = ("Sorry you have run out of time")  /**POSSIBLE DO THIS in Timer Area dependant on formatting */
-     document.getElementById("game-finished-text").setAttribute("visible");
+     elGameFinishedText.setAttribute("overlay-text","visible");      /**NOT WORKING AHHHHHHHHH */
      //cards[playerCards].removeEventListener("click",turnCard)   DOESNT WORK  
      /**createPlayerCard.removeEventListener("click", turnCard)   DOESNT WORK ? **/  
 
@@ -176,7 +176,7 @@ function checkIfMatch () {        /**moved to a function as need to call it mult
   
         if (score == playerCards.length/2)     /** maybe change score to cardsMatched or something more meaningful */
         console.log("All Cards Matched")    /**use textContent or innerhtml to write this back to html **/  
-        document.getElementById("game-finished-text").setAttribute("visible");
+        elGameFinishedText.setAttribute("overlay-text","visible"); /**NOT WORKING AHHHHHHHHH */
 
         //DISPLAY A MESSAGE 
        

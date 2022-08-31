@@ -20,6 +20,7 @@ body {
     grid-column-gap: 2px;
     /**margin:1px; **/
     border:1px solid antiquewhite;   /**TEMP just to show area of card game - need to add border, spacing and styles to EACH Card **/
+    z-index:99;
     
 }
 #instructions-area {
@@ -69,7 +70,7 @@ border:1px solid black;
     display:flex;
     justify-content: center;
     align-items: center;
-    z-index: 100;
+    z-index: 100; /**stack order higher the number the further forward**/
     color:antiquewhite;
     font-family: "Bebas Neue";
     font-size: 8em;
@@ -89,6 +90,10 @@ border:1px solid black;
     display: flex;
     flex-direction:column;
     animation: overlay-grow 500ms forwards;
+}
+
+.visible {             /**do i need this **/
+    display:visible;
 }
 
 @keyframes overlay-grow {
