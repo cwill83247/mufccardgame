@@ -1,8 +1,9 @@
-let score = 0;         /**let as needs ot be changeable  */
+let score = 0;         /**let as needs to be changeable  */
 const scoreCount = document.querySelector("#score-area");
 const gameArea = document.querySelector("#card-game-area");
-let timer; //had to declare timer here to stop negative numbers when it runnign as parto fthe start game . as couldnt see timer as declared.
-let countdownTimer = 10;  /**changed to 10 seconds for testing */
+let timer; //had to declare timer here to stop negative numbers when it running as part of the start game as couldnt see timer as declared.
+let countdownTimer = 10;  /**initial value - changed to 10 seconds for testing */
+let cards;
 
 
 function decreaseCounter(){
@@ -19,6 +20,7 @@ function decreaseCounter(){
      console.log ("you have run out of time")   //need to stop user being able to play the game .. so remove event listener maybe and then a message start new game...
      clearInterval(timer)
      countdownElement.textContent = ("Sorry you have run out of time")  /**POSSIBLE DO THIS in Timer Area dependant on formatting */
+     //cards[playerCards].removeEventListener("click",turnCard)   DOESNT WORK  
      /**createPlayerCard.removeEventListener("click", turnCard)   DOESNT WORK ? **/  
 
 
@@ -129,7 +131,8 @@ function turnCard() {
     console.log(selectedCardsId)
     this.setAttribute("src",playerCards[selectedCardId].playerImage)   /**set src image attribute , by using the selected card id, putting that into our array which then finds the image url */
     if (selectedCards.length ==2){    /*running checkmatch function if we have 2 cards  */
-        checkIfMatch()               /**calling my check match function */    
+    //setTimeout(flipCardsBack(),3000) //or do I add the delay before the check match ???
+     setTimeout(checkIfMatch, 750);               /**calling my check match function and adding a delay so can see both cards briefly  */    
     } //other wise carry on...back round... 
 }
                                                          
@@ -152,15 +155,14 @@ function checkIfMatch () {        /**moved to a function as need to call it mult
 
         }else 
         {
-            console.log ("no match or not working")
+            console.log ("no match will now flip cards back after 3 second delay")
             console.log(this)              /**handy to see what is being logged when using this ***/
             console.log(selectedCards)   
-    /**need a delay before flipping cards back ideally adjustable so can add LEVELS **/
-          
-
+            setTimeout(flipCardsBack,3000)   /**NOT WORKING need a delay before flipping cards back ideally adjustable so can add LEVELS **/               
            cards[selectedCardsId[0]].setAttribute("src", "assets/images/front-card-face.fw.png")  /**doesnt work saying its not a function had to change to cardsId */
+           //POSSIBLY DELAY HERE AS WELL
            cards[selectedCardsId[1]].setAttribute("src", "assets/images/front-card-face.fw.png")  /**doesnt work saying its not a function had to change to cardsId  */
-
+        
            console.log("I am here in the script")
             
         }
@@ -173,19 +175,26 @@ function checkIfMatch () {        /**moved to a function as need to call it mult
         if (score == playerCards.length/2)     /** maybe change score to cardsMatched or something more meaningful */
         console.log("All Cards Matched")    /**use textContent or innerhtml to write this back to html **/  
 
+        //DISPLAY A MESSAGE 
+       
+
     }
     
+   function flipCardsBack() {   //had to create so could use setTimeout
+    
+   console.log("I am here in the script")
+   } 
+
    function startNewGame () {  
     playerCards.sort (()=> 0.5 - Math.random())  //every new game it needs to randomize.... 
     gameArea.innerHTML = "";  //clear existing game area  
     score = 0;
     scoreCount.innerHTML ="";  
-    countdownTimer = 20;    //used 20 so i know this part is working POSSIBLY VARIABLE FOR LEVELS 30, 60, 90 Seconds 
+    countdownTimer = 5;    //used 5 so i know this part is working POSSIBLY VARIABLE FOR LEVELS 30, 60, 90 Seconds 
     timer = setInterval(decreaseCounter, 1000); /*put it inside the decrease counter but doh it was calling itself  HOWEVER NOW RUNNING AT START UP moved inside new game so only starts when game starts */
     //now get negative numbers because timer is not defined ---- think the function decrease counter cant see it...
     //decreaseCounter() /***NOT WORKING IF TIME RUNS OUT  */
     console.log ("start button clicked") // works however not creating a new game...  do I need to refresh canvas or turn all cards back, ideally want to do a shuffle as well..  ??
-    
     createGameArea();
 }
 
