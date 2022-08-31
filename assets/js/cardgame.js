@@ -1,9 +1,9 @@
 let score = 0;         /**let as needs ot be changeable  */
 const scoreCount = document.querySelector("#score-area");
 const gameArea = document.querySelector("#card-game-area");
-
+let timer; //had to declare timer here to stop negative numbers when it runnign as parto fthe start game . as couldnt see timer as declared.
 let countdownTimer = 10;  /**changed to 10 seconds for testing */
-const timer = setInterval(decreaseCounter, 1000); /*put it inside the decrease counter but doh it was calling itself  HOWEVER NOW RUNNING AT START UP moved inside new game so only starts when game starts */
+
 
 function decreaseCounter(){
        /**!!!!!!!!!ONLY want this to run when game starts */                  /**had to set this as a variable so can use the clearInteval to stop negative numbers */
@@ -181,9 +181,9 @@ function checkIfMatch () {        /**moved to a function as need to call it mult
     score = 0;
     scoreCount.innerHTML ="";  
     countdownTimer = 20;    //used 20 so i know this part is working POSSIBLY VARIABLE FOR LEVELS 30, 60, 90 Seconds 
-    
-
-    decreaseCounter() /***NOT WORKING IF TIME RUNS OUT  */
+    timer = setInterval(decreaseCounter, 1000); /*put it inside the decrease counter but doh it was calling itself  HOWEVER NOW RUNNING AT START UP moved inside new game so only starts when game starts */
+    //now get negative numbers because timer is not defined ---- think the function decrease counter cant see it...
+    //decreaseCounter() /***NOT WORKING IF TIME RUNS OUT  */
     console.log ("start button clicked") // works however not creating a new game...  do I need to refresh canvas or turn all cards back, ideally want to do a shuffle as well..  ??
     
     createGameArea();
