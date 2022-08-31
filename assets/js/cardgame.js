@@ -20,6 +20,7 @@ function decreaseCounter(){
      console.log ("you have run out of time")   //need to stop user being able to play the game .. so remove event listener maybe and then a message start new game...
      clearInterval(timer)
      countdownElement.textContent = ("Sorry you have run out of time")  /**POSSIBLE DO THIS in Timer Area dependant on formatting */
+     document.getElementById("game-finished-text").setAttribute("visible");
      //cards[playerCards].removeEventListener("click",turnCard)   DOESNT WORK  
      /**createPlayerCard.removeEventListener("click", turnCard)   DOESNT WORK ? **/  
 
@@ -175,6 +176,7 @@ function checkIfMatch () {        /**moved to a function as need to call it mult
   
         if (score == playerCards.length/2)     /** maybe change score to cardsMatched or something more meaningful */
         console.log("All Cards Matched")    /**use textContent or innerhtml to write this back to html **/  
+        document.getElementById("game-finished-text").setAttribute("visible");
 
         //DISPLAY A MESSAGE 
        

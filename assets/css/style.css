@@ -28,6 +28,7 @@ body {
     background-color: black;
     color:antiquewhite;
     font-family: "Bebas Neue";
+    font-size:1.5rem;
 }
 .player-card {  /**add styling to teach card **/
      /*** CHANGE THIS SO RESPONSIVE **/
@@ -41,6 +42,10 @@ body {
     margin:4px;
 
 }
+.player-card:hover {
+    cursor: pointer;
+}
+
 img {
 
 border:1px solid black;
@@ -49,13 +54,16 @@ border:1px solid black;
 #score-results-area {
     background-color: #DA291C;
 }
+#how-to-play {
+    background-color: #DA291C;
+}
 
 /**OVERLAY TEXT**/
 
 .overlay-text {
-    position: fixed;   /***CHECK RESPONSIVENESS **/
-    top: 0;
-    left: 0;
+    position: relative;   /***CHECK RESPONSIVENESS **/
+    top: 10rem;
+    left: 10rem;
     right: 0;
     bottom: 0;
     display:flex;
@@ -68,6 +76,10 @@ border:1px solid black;
     display:none; /**Initally Hidden **/
 
 }
+.overlay-text:hover{
+    cursor: pointer;
+}
+
 .overlay-text-small {
     font-size:0.5em;
     
@@ -85,7 +97,7 @@ border:1px solid black;
         font-size:0;
         }
     to {
-        background-color:rgba(0,0,0,0.8);
+        background-color: #DA291C; /**rgba(0,0,0,0.8); **/
         font-size:8em;
 
        }
