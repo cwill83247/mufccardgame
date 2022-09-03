@@ -27,7 +27,7 @@ function decreaseCounter(){
      elGameFinishedText.classList.add("visible");      /**NOT WORKING AHHHHHHHHH */
      modal.style.display = "block";  
      console.log(cwModalText);
-     cwModalText.textContent = ("Sorry you have run out of time, you matched " + score);
+     cwModalText.textContent = ("Sorry you have run out of time, you matched " + score + " pair(s).");
      
      }
      
@@ -139,7 +139,7 @@ function turnCard() {
     
         if (selectedCards.length ==2){    /*running checkmatch function if we have 2 cards  */
         //setTimeout(flipCardsBack(),3000) //or do I add the delay before the check match ???
-        setTimeout(checkIfMatch, 800);               /**calling my check match function and adding a delay so can see both cards briefly  */    
+        setTimeout(checkIfMatch, 600);               /**calling my check match function and adding a delay so can see both cards briefly  */    
         } 
 }
 
@@ -163,10 +163,10 @@ function checkIfMatch () {        /**moved to a function as need to call it mult
 
         }else 
         {
-            console.log ("no match will now flip cards back after 3 second delay")
+            console.log ("no match will now flip cards back after 2 second delay")
             console.log(this)              /**handy to see what is being logged when using this ***/
             console.log(selectedCards)   
-            setTimeout(flipCardsBack,3000)   /**NOT WORKING need a delay before flipping cards back ideally adjustable so can add LEVELS **/               
+            setTimeout(flipCardsBack,2000)   /**NOT WORKING need a delay before flipping cards back ideally adjustable so can add LEVELS **/               
            cards[selectedCardsId[0]].setAttribute("src", "assets/images/front-card-face.fw.png")  /**doesnt work saying its not a function had to change to cardsId */
            //POSSIBLY DELAY HERE AS WELL
            cards[selectedCardsId[1]].setAttribute("src", "assets/images/front-card-face.fw.png")  /**doesnt work saying its not a function had to change to cardsId  */
@@ -180,12 +180,16 @@ function checkIfMatch () {        /**moved to a function as need to call it mult
 
     // checking if all cards have been matched
   
-        if (score == playerCards.length/2)     /** maybe change score to cardsMatched or something more meaningful */
+        if (score === playerCards.length/2) {    /** maybe change score to cardsMatched or something more meaningful */
         console.log("All Cards Matched")    /**use textContent or innerhtml to write this back to html **/  
+        modal.style.display = "block"; 
+        cwModalText.textContent = ("ALL matched " + score + " pair(s).");
+        clearInterval(timer);
         //elGameFinishedText.setAttribute("overlay-text","visible"); /**NOT WORKING AHHHHHHHHH */
+        
 
         //DISPLAY A MESSAGE 
-       
+    }
 
     }
     
@@ -199,7 +203,7 @@ function checkIfMatch () {        /**moved to a function as need to call it mult
     gameArea.innerHTML = "";  //clear existing game area  
     score = 0;
     scoreCount.innerHTML ="";  
-    countdownTimer = 5;    //used 5 so i know this part is working POSSIBLY VARIABLE FOR LEVELS 30, 60, 90 Seconds 
+    countdownTimer = 60;    //used 5 so i know this part is working POSSIBLY VARIABLE FOR LEVELS 30, 60, 90 Seconds 
     timer = setInterval(decreaseCounter, 1000); /*put it inside the decrease counter but doh it was calling itself  HOWEVER NOW RUNNING AT START UP moved inside new game so only starts when game starts */
     //now get negative numbers because timer is not defined ---- think the function decrease counter cant see it...
     //decreaseCounter() /***NOT WORKING IF TIME RUNS OUT  */
@@ -236,4 +240,4 @@ window.onclick = function(event) {
   }
 }
 
-startNewGame()
+//startNewGame()
