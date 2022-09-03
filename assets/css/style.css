@@ -13,6 +13,9 @@ body {
     background-color: #DA291C; /** man utd RED color **/
     display:flex;
 }
+#game-area {
+    background-color: aqua;
+}
 #card-game-area {
     display: grid;
     grid-template-columns: repeat(4,12rem);
@@ -70,7 +73,7 @@ border:1px solid black;
     display:flex;
     justify-content: center;
     align-items: center;
-    z-index: 100; /**stack order higher the number the further forward**/
+    /***z-index: 100; /**stack order higher the number the further forward**/
     color:antiquewhite;
     font-family: "Bebas Neue";
     font-size: 8em;
@@ -94,6 +97,8 @@ border:1px solid black;
 
 .visible {             /**do i need this **/
     display:visible;
+    z-index:100;
+
 }
 
 @keyframes overlay-grow {
@@ -107,6 +112,49 @@ border:1px solid black;
 
        }
 }
+
+
+/****Modal Box Styling from W3 Schools ***/
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 3px solid #DA291C;
+    width: 80%; /* Could be more or less, depending on screen size */
+    font-family: "Bebas Neue";
+    font-size: 4em;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
 @media (max-width :600px) {
     #card-game-area {
         grid-template-columns: repeat(3, auto);

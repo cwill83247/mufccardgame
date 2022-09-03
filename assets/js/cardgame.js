@@ -5,6 +5,7 @@ let timer; //had to declare timer here to stop negative numbers when it running 
 let countdownTimer = 10;  /**initial value - changed to 10 seconds for testing */
 let cards;
 const elGameFinishedText = document.getElementById("game-finished-text"); /**NOT WORKING AHHHHHHHHH */
+const cwModalText = document.getElementById("cw-test");
 
 function decreaseCounter(){
        /**!!!!!!!!!ONLY want this to run when game starts */                  /**had to set this as a variable so can use the clearInteval to stop negative numbers */
@@ -20,15 +21,16 @@ function decreaseCounter(){
         console.log("checking:" ,elGameFinishedText)    //really really useful 
         console.log ("you have run out of time")   //need to stop user being able to play the game .. so remove event listener maybe and then a message start new game...
      clearInterval(timer)
-     countdownElement.textContent = ("Sorry you have run out of time")  /**POSSIBLE DO THIS in Timer Area dependant on formatting */
      
+     //put inside Modal 
+     countdownElement.textContent = ("Sorry you have run out of time");  /**POSSIBLE DO THIS in Timer Area dependant on formatting */
      elGameFinishedText.classList.add("visible");      /**NOT WORKING AHHHHHHHHH */
-     //cards[playerCards].removeEventListener("click",turnCard)   DOESNT WORK  
-     /**createPlayerCard.removeEventListener("click", turnCard)   DOESNT WORK ? **/  
-
-
-    }
-
+     modal.style.display = "block";  
+     console.log(cwModalText);
+     cwModalText.textContent = ("Sorry you have run out of time, you matched " + score);
+     
+     }
+     
 }
 
 scoreCount.textContent = score;
@@ -203,6 +205,35 @@ function checkIfMatch () {        /**moved to a function as need to call it mult
     //decreaseCounter() /***NOT WORKING IF TIME RUNS OUT  */
     console.log ("start button clicked") // works however not creating a new game...  do I need to refresh canvas or turn all cards back, ideally want to do a shuffle as well..  ??
     createGameArea();
+}
+
+//w3 schools modal JavaScript
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+ 
+   
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 }
 
 startNewGame()
