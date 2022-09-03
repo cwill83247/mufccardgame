@@ -27,13 +27,14 @@
         <div id="score-results-area">
             Main Content Section
             <p id ="countdown-timer"><!--Timer part of script will insert here--> </p> 
-            <div> <button id="new-game" onclick="startNewGame()">New Game</button> </div> <!-- NOT WORKING DO I Need an EVENT LISTENER-->
+            <!--<div> <button id="new-game" onclick="startNewGame()">New Game</button> </div> <!-- NOT WORKING DO I Need an EVENT LISTENER-->
+            <div> <button id="new-game" onclick="location.reload(true)">Restart</button> </div>
             <div id ="score-area"><p>Cards Matched:</p><span></span></div>
          </div>
         </div>     
        <div id="card-game-area"> 
         
-        <div id="start-game-text" class="overlay-text visible" onclick="startNewGame()">  <!--<div class="overlay-text visible">-->
+        <div id="start-game-text" class="overlay-text" onclick="startNewGame()">  <!--<div class="overlay-text visible">-->
             Start Game
               <!--Cards getting added by JS, and the styling is also assigned with JS-->
         </div>   

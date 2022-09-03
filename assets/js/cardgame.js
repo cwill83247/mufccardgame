@@ -17,10 +17,12 @@ function decreaseCounter(){
 
     // this part is affecting my new game function when gets to 0 timer has been cleared do i just reset as aprt of new game ??  
     if (countdownTimer < 0) { //stop the setInterval when at 0
-     console.log ("you have run out of time")   //need to stop user being able to play the game .. so remove event listener maybe and then a message start new game...
+        console.log("checking:" ,elGameFinishedText)    //really really useful 
+        console.log ("you have run out of time")   //need to stop user being able to play the game .. so remove event listener maybe and then a message start new game...
      clearInterval(timer)
      countdownElement.textContent = ("Sorry you have run out of time")  /**POSSIBLE DO THIS in Timer Area dependant on formatting */
-     elGameFinishedText.setAttribute("overlay-text","visible");      /**NOT WORKING AHHHHHHHHH */
+     
+     elGameFinishedText.classList.add("visible");      /**NOT WORKING AHHHHHHHHH */
      //cards[playerCards].removeEventListener("click",turnCard)   DOESNT WORK  
      /**createPlayerCard.removeEventListener("click", turnCard)   DOESNT WORK ? **/  
 
@@ -132,11 +134,13 @@ function turnCard() {
     console.log(selectedCardsId)
     this.setAttribute("src",playerCards[selectedCardId].playerImage)   /**set src image attribute , by using the selected card id, putting that into our array which then finds the image url */
          
+    
         if (selectedCards.length ==2){    /*running checkmatch function if we have 2 cards  */
         //setTimeout(flipCardsBack(),3000) //or do I add the delay before the check match ???
         setTimeout(checkIfMatch, 800);               /**calling my check match function and adding a delay so can see both cards briefly  */    
-        } //other wise carry on...back round... 
+        } 
 }
+
                                                          
  //checking for a Match
 
@@ -147,7 +151,7 @@ function checkIfMatch () {        /**moved to a function as need to call it mult
     console.log(cards)
     console.log ("is this part working")
         /** if(selectedCards[0].playerName == selectedCards[1].playerName) {    - dont need to specify playerName as pushing the name into the SelectedCards Array and only info in the array is an id and the playersname **/        
-        if(selectedCards[0] == selectedCards[1]) {
+        if((selectedCards[0] == selectedCards[1]) && (selectedCardsId[0] !== selectedCardsId[1])) {  //making sure cant double click to get a score.... 
         console.log("its a match")
         playerScore()
         console.log(score)
@@ -176,7 +180,7 @@ function checkIfMatch () {        /**moved to a function as need to call it mult
   
         if (score == playerCards.length/2)     /** maybe change score to cardsMatched or something more meaningful */
         console.log("All Cards Matched")    /**use textContent or innerhtml to write this back to html **/  
-        elGameFinishedText.setAttribute("overlay-text","visible"); /**NOT WORKING AHHHHHHHHH */
+        //elGameFinishedText.setAttribute("overlay-text","visible"); /**NOT WORKING AHHHHHHHHH */
 
         //DISPLAY A MESSAGE 
        
@@ -201,3 +205,4 @@ function checkIfMatch () {        /**moved to a function as need to call it mult
     createGameArea();
 }
 
+startNewGame()
