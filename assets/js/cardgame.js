@@ -7,6 +7,10 @@ let cards;
 const elGameFinishedText = document.getElementById("game-finished-text"); /**NOT WORKING AHHHHHHHHH */
 const cwModalText = document.getElementById("cw-test");
 
+function jestTest() {
+    return 12;
+}
+
 function decreaseCounter(){
        /**!!!!!!!!!ONLY want this to run when game starts */                  /**had to set this as a variable so can use the clearInteval to stop negative numbers */
 
@@ -241,3 +245,5 @@ window.onclick = function(event) {
 }
 
 //startNewGame()
+
+//module.exports = createGameArea;

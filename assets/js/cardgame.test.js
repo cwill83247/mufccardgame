@@ -1,8 +1,22 @@
-beforeAll(() => { 
-    6     let fs = require("fs"); 
-    7     let fileContents = fs.readFileSync("index.html", "utf-8"); 
-    8     document.open(); 
-    9     document.write(fileContents); 
-    10     document.close(); 
-    11 }) 
+/**
+ * @jest-environment jsdom
+ */
+/**boilerPlate script as part of JEST  */
+ beforeAll(() => {
+    let fs = require("fs");
+    let fileContents = fs.readFileSync("index.html", "utf-8");
+    document.open();
+    document.write(fileContents);
+    document.close();
+});
+const jestTest = require("./cardgame.js"); 
+
+    /**I want to test cards that are created */
+    describe("Cards Tests", () => {
+        describe("check number of cards created", () => {
+            test("should return 12", () => {
+                expect(jestTest.length.toBe(12));
+            });
+        });
+    });
     
