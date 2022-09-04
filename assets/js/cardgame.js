@@ -246,4 +246,5 @@ window.onclick = function(event) {
 
 //startNewGame()
 
-//module.exports = createGameArea;
+module.exports = {jestTest,startNewGame};
+
