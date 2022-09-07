@@ -2,12 +2,12 @@
  * @jest-environment jsdom
  */
 
-/**boilerPlate script as part of JEST  */
+
 let jestTest;
 let startNewGame;
 let createGameArea;
 let playerScore;
-
+let score;
 
 
 /**used Mocking to create an simulated environment to test DOM */
@@ -18,15 +18,15 @@ let playerScore;
     document.write(fileContents);
     document.close();
 
-    jestTest = require("./cardgame.js").jestTest;   //advised by student support
+    jestTest = require("./cardgame.js").jestTest;   
     startNewGame = require("./cardgame.js").startNewGame; 
     createGameArea = require("./cardgame.js").createGameArea; 
     playerScore = require("./cardgame.js").playerScore; 
+    score = require("./cardgame.js").score; 
     
 });
 
-
-    /**I want to test cards that are created */
+    /**test jest is workingd */
     describe("Cards Tests", () => {
         describe("check number of cards created", () => {
             test("should return 12", () => {
@@ -39,28 +39,34 @@ let playerScore;
   describe("new Game", () => {
     describe("check score is reset to 0", () => {
         test("should return 0", () => {
-            expect(startNewGame(score)).toBe(0);
+            expect(startNewGame()).toBe(0);
         });
     });
-    describe("check number of cards", () => {
-        test("should return 12", () => {
-            createGameArea();
-            expect(i()).toBe(12);
-        });
-    });
+    
 });
  
-//testing number of matched cards gets updated in the DOM
 
 beforeEach(() => {
     document.getElementById.innerHTML = "<div id=score-area></div>" ;
+    document.getElementById.innerHTML = "<p id=countdown-timer></div>" ;
  });
 
 describe("testing DOM", () => {
     test("expect number of cards matched to equal 1", () => {
-        const newScore = 1;
         playerScore();
         expect(document.getElementById("score-area").innerHTML).toEqual("Cards Matched:1");
     });
+
+    test("expect countdown timer to equal 60", () => {
+        startNewGame();
+        expect(document.getElementById("countdown-timer").innerHTML).toEqual("Countdown Timer: 60");
+    });
 });
-//end of testing number of matched cards gets updated in the DOM
+//end of test 2
+
+//testing number of cards = 12 
+beforeAll(() => {
+    document.getElementById.innerHTML = "<div id=score-area></div>" ;
+ });
+
+ 

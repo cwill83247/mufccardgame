@@ -2,7 +2,7 @@ let score = 0;         /**let as needs to be changeable  */
 const scoreCount = document.querySelector("#score-area");
 const gameArea = document.querySelector("#card-game-area");
 let timer; //had to declare timer here to stop negative numbers when it running as part of the start game as couldnt see timer as declared.
-let countdownTimer = 10;  /**initial value - changed to 10 seconds for testing */
+let countdownTimer = 60;  /**initial value - changed to 10 seconds for testing */
 let cards;
 const elGameFinishedText = document.getElementById("game-finished-text"); /**NOT WORKING AHHHHHHHHH */
 const cwModalText = document.getElementById("cw-test");
@@ -122,7 +122,7 @@ function createGameArea() {
         cardGameArea.appendChild(createPlayerCard)             /**adding each card to my player area */
         
         /*** document.getElementById("new-game").addEventListener("click",createGameArea())  - every time iterates adds more cards ***/ 
-                
+              
     }
 
 }
@@ -202,7 +202,7 @@ function checkIfMatch () {        /**moved to a function as need to call it mult
    console.log("I am here in the script")
    } 
 
-   function startNewGame () {  
+function startNewGame () {  
     playerCards.sort (()=> 0.5 - Math.random())  //every new game it needs to randomize.... 
     gameArea.innerHTML = "";  //clear existing game area  
     score = 0;
@@ -213,6 +213,7 @@ function checkIfMatch () {        /**moved to a function as need to call it mult
     //decreaseCounter() /***NOT WORKING IF TIME RUNS OUT  */
     console.log ("start button clicked") // works however not creating a new game...  do I need to refresh canvas or turn all cards back, ideally want to do a shuffle as well..  ??
     createGameArea();
+    return score
 }
 
 //w3 schools modal JavaScript
