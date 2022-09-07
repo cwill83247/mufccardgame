@@ -6,8 +6,8 @@ const gameArea = document.querySelector("#card-game-area");
 let timer; //had to declare timer here to stop negative numbers when it running as part of the start game as couldnt see timer as declared.
 let countdownTimer = 60;  /**initial value - changed to 10 seconds for testing */
 //let cards;
-const elGameFinishedText = document.getElementById("game-finished-text"); /**NOT WORKING AHHHHHHHHH */
-const cwModalText = document.getElementById("cw-test");
+const elGameFinishedText = document.getElementById("game-finished-text"); 
+const modalText = document.getElementById("modal-text");
 
 function jestTest() {
     return 12;
@@ -32,8 +32,8 @@ function decreaseCounter(){
      countdownElement.textContent = ("Sorry you have run out of time");  /**POSSIBLE DO THIS in Timer Area dependant on formatting */
      elGameFinishedText.classList.add("visible");      /**NOT WORKING AHHHHHHHHH */
      modal.style.display = "block";  
-     console.log(cwModalText);
-     cwModalText.textContent = ("Sorry you have run out of time, you matched " + score + " pair(s).");
+     console.log(modalText);
+     modalText.textContent = ("Sorry you have run out of time, you matched " + score + " pair(s).");
      
      }
      
@@ -177,7 +177,7 @@ function checkIfMatch () {        /**moved to a function as need to call it mult
         if (score === playerCards.length/2) {    /** maybe change score to cardsMatched or something more meaningful */
         console.log("All Cards Matched");    /**use textContent or innerhtml to write this back to html **/  
         modal.style.display = "block"; 
-        cwModalText.textContent = ("ALL matched " + score + " pair(s).");
+        modalText.textContent = ("Congratulations -  ALL matched " + score + " pair(s).");
         clearInterval(timer);
         //elGameFinishedText.setAttribute("overlay-text","visible"); /**NOT WORKING AHHHHHHHHH */        
         //DISPLAY A MESSAGE 

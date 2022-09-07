@@ -27,7 +27,7 @@ let score;
     
 });
 
-    /**test jest is workingd */
+    /**test jest is working */
     describe("Cards Tests", () => {
         describe("check number of cards created", () => {
             test("should return 12", () => {
@@ -36,8 +36,8 @@ let score;
         });
     });
 
-  /**I want to test when a new game starts */
-  describe("new Game", () => {
+  
+  describe("testing a new Game being started", () => {
     describe("check score is reset to 0", () => {
         test("should return 0", () => {
             expect(startNewGame()).toBe(0);
@@ -46,13 +46,12 @@ let score;
     
 });
  
-
 beforeEach(() => {
     document.getElementById.innerHTML = "<div id=score-area></div>" ;
     document.getElementById.innerHTML = "<p id=countdown-timer></div>" ;
  });
 
-describe("testing DOM", () => {
+describe("testing DOM makng sure elements set as expected", () => {
     test("expect number of cards matched to equal 1", () => {
         playerScore();
         expect(document.getElementById("score-area").innerHTML).toEqual("Cards Matched:1");
@@ -63,7 +62,7 @@ describe("testing DOM", () => {
         expect(document.getElementById("countdown-timer").innerHTML).toEqual("Countdown Timer: 60");
     });
 });
-//end of test 2
+
 
 //testing number of cards = 12 
 beforeAll(() => {

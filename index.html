@@ -15,53 +15,53 @@
     <title>Manchester United - can you match all of the players ?</title>
 </head>
 <body>
-  <header>
-   <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
-        <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-          <img src="/images/Manchester_United_FC_crest.svg.png"/>
-          <span class="fs-4">MUFC - Match the Players</span>
-        </a>
-  </header>
-        <main>
+  <div class ="container"> 
+ <div class="header">
+          <div class="logo"><img src="assets/images/Manchester_United_FC_crest.svg.png"/></div>
+  <h1 class="title-text">Match the Players</h1>
+</div>
+
+  <main>
     <section id= "main-content">
         <div class="row g-5">
             <div class="col-md-6">  
     <div id ="instructions-area">
         <div id="how-to-play"><h1>How to Play</h1></div>
         <p>
-        What is Lorem Ipsum?
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-        when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-        and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </p> Instructions Area
+        Can you match all of the pairs in 60 seconds ? The aim of the game is to match all of the players, within 60 seconds.In total there are 6 matching pairs.
+
+        Click > START GAME > to begin. The timer will start counting down.
+
+        You will see players past and present, how many do you recognise.
+
+        </p> 
+        
         <div id="score-results-area">
-            Main Content Section
-            <p id ="countdown-timer"><!--Timer part of script will insert here--> </p> 
-            <div> <button id="new-game" onclick="startNewGame()">New Game</button> </div> <!-- NOT WORKING DO I Need an EVENT LISTENER-->
+           
+            <h2><p id ="countdown-timer"><!--Timer part of script will insert here--> </p> </h2>
+            <div> <button id="new-game" onclick="startNewGame()">New Game</button> </div> 
             <div> <button id="new-game" onclick="location.reload(true)">Restart</button> </div>
             <div id ="score-area"><p>Cards Matched:</p><span></span></div>
          </div>
         </div> 
         </div>
         
-   <div class="col-md-6">
-     <!--<div id ="game-area"> -->       
+   <div class="col-md-6">   
        <div id="card-game-area"> 
+                
                 <div id="start-game-text" class="overlay-text visible" onclick="startNewGame()">  <!--<div class="overlay-text visible">-->
-            Start Game
+            Start <br> Game
               <!--Cards getting added here  by JS-->
         </div>               
             <div id="game-finished-text" class="overlay-text">
-            You Matched 
-            <span class="overlay-text-small"> Click to start a new game</span>
+            
+            <span class="overlay-text-small"> </span>
              
         </div>  
    </div>       
         <!-- Trigger/Open The Modal W3 Schools -->   
-        <button id="myBtn">Open Modal</button>
+        
+        <button id="myBtn">if remove</button>  
 
             <!-- The Modal -->
             <div id="myModal" class="modal">
@@ -69,7 +69,7 @@
             <!-- Modal content -->
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <div id ="cw-test"></div> 
+                <div id ="modal-text"></div> 
                 <div> <button id="new-game" onclick="location.reload(true)">Retry</button> </div>
             </div>
 </div>

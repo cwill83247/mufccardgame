@@ -8,44 +8,98 @@
     box-sizing: border-box;
 }
 
+.banner {
+    background: #d7172f;
+    background: #d7172f;
+    background: linear-gradient(90deg, rgba(255, 0, 0) 0%, rgba(0, 0, 0) 100%);
+    height: 10vh;
+
+}
+
+.logo {
+    margin: auto;
+    display: block;
+    /**margin-top: -50px; **/
+    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+    
+}
+
+.logo img {
+    display: block;  
+    margin-left: auto;  
+    margin-right: auto; 
+    border:none;
+    width:10rem;
+    height:10rem;
+    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+}
+.title-text {
+color:rgb(255, 255, 255);
+font-family: "Bebas Neue";
+text-align:center;
+font-size:6rem;
+filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+}
+
 body {
-    height : 100vh;  /**100% of available height **/
+    /**height : 100vh;  /**100% of available height **/
     background-color: #DA291C; /** man utd RED color **/
-    display:flex;
+    /**display:flex;   **/
 }
-#game-area {
+/**7/9/2022   game-area {
     background-color: aqua;
+}**/
+#instructions-area p{
+    padding:0.5 rem;
+    margin: 10px;
 }
+
+#start-game-text {
+    text-align:center;
+    /**margin-left:auto; **/  
+    /**margin-right:auto; **/ 
+    margin-top:4rem;
+    color:white;
+    display: flex;
+    flex-direction:column; 
+    animation: overlay-grow 500ms forwards;
+    font-family: "Bebas Neue";
+    font-size: 6rem;
+
+    }
+
 #card-game-area {
     display: grid;
-    grid-template-columns: repeat(4,12rem);
-    grid-template-rows: repeat(3,16rem);
+    grid-template-columns: repeat(4,auto); /**changed to auto 7/9/2022 **/
+    grid-template-rows: repeat(3,auto);
     grid-column-gap: 2px;
     /**margin:1px; **/
     border:1px solid antiquewhite;   /**TEMP just to show area of card game - need to add border, spacing and styles to EACH Card **/
-    z-index:99;
-    
+    z-index:99;  
 }
+
 #instructions-area {
     display:flex;
     flex-direction:column;
     background-color: black;
     color:antiquewhite;
     font-family: "Bebas Neue";
-    font-size:1.5rem;
+    font-size:1.5rem;   
+       
+
 }
 .player-card {  /**add styling to each card **/
-     /*** CHANGE THIS SO RESPONSIVE **/
     width:100%;
     height:100%;
-    border: 0.5px solid black;
+    border:1.5px solid black;
     transform-style:preserve-3d; /**??? ***/ 
     border-radius: 25px;
     background: #DA291C;
     padding: 20px;
     margin:4px;
-
+    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5)); 
 }
+
 .player-card:hover {
     cursor: pointer;
 }
@@ -61,25 +115,35 @@ border:1px solid black;
 #how-to-play {
     background-color: #DA291C;
 }
+/**button css adapted from https://fdossena.com/?p=html5cool/buttons/i.frag **/
+a.button3{
+    display:inline-block;
+    padding:0.3em 1.2em;
+    margin:0 0.3em 0.3em 0;
+    border-radius:2em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#FFFFFF;
+    background-color:#4eb5f1;
+    text-align:center;
+    transition: all 0.2s;
+    }
+    
+    a.button3:hover{
+    background-color:#4095c6;
+    }
+    @media all and (max-width:30em){
+    a.button3{
+    display:block;
+    margin:0.2em auto;
+     }
+    }
 
 /**OVERLAY TEXT**/
 
-.overlay-text {
-    position: relative;   /***CHECK RESPONSIVENESS **/
-    top: 10rem;
-    left: 10rem;
-    right: 0;
-    bottom: 0;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    /***z-index: 100; /**stack order higher the number the further forward**/
-    color:antiquewhite;
-    font-family: "Bebas Neue";
-    font-size: 8em;
-    display:none; /**Initally Hidden **/
 
-}
 .overlay-text:hover{
     cursor: pointer;
 }
@@ -89,17 +153,12 @@ border:1px solid black;
     
 }
 
-.overlay-text.visible {
+/****.overlay-text.visible {
     display: flex;
-    flex-direction:column;
+    flex-direction:column; 
     animation: overlay-grow 500ms forwards;
-}
-
-.visible {             /**do i need this **/
-    display:visible;
-    z-index:100;
-
-}
+     
+}**/
 
 @keyframes overlay-grow {
     from {
@@ -157,6 +216,6 @@ border:1px solid black;
 
 @media (max-width :600px) {
     #card-game-area {
-        grid-template-columns: repeat(3, auto);
+        grid-template-columns: repeat(2, auto);
     }
 }
