@@ -44,14 +44,13 @@ let playerScore;
     });
     describe("check number of cards", () => {
         test("should return 12", () => {
-            const i =0;
             createGameArea();
             expect(i()).toBe(12);
         });
     });
 });
  
-//testing number of matched cards getting displayed
+//testing number of matched cards gets updated in the DOM
 
 beforeEach(() => {
     document.getElementById.innerHTML = "<div id=score-area></div>" ;
@@ -64,4 +63,4 @@ describe("testing DOM", () => {
         expect(document.getElementById("score-area").innerHTML).toEqual("Cards Matched:1");
     });
 });
-//end of section number of matched cards getting displayed
+//end of testing number of matched cards gets updated in the DOM
