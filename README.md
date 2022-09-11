@@ -127,6 +127,16 @@ o	The cards are always displayed in random positions, so its always equally chal
 •	Manual testing was carried out, against my user stories.
 •	 Family members tested the game, and gave me feedback. 
 
+alidation
+
+HTML - Validator used - https://validator.w3.org/ Passes all test
+
+Accessibility - Lighthouse Viewer chrome developer tools - https://developers.google.com/web/tools/lighthouse page achieve 91%
+
+CSS - Jigsaw W3C Validator CSS - https://jigsaw.w3.org/css-validator/ This document validates as CSS level 3 + SVG !
+
+JS Hint - https://jshint.com/ - only error is related to module.exports as part of JEST testing and doesnt effect game play.
+
 
 # Credits
 Reference materials  usee !!!!
