@@ -1,4 +1,4 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+![Love Labs screen mockups](https://github.com/cwill83247/love-labs-love-food/blob/main/assets/images/lovelabs_mockup.PNG)
 
 # Purpose
 The purpose of this site, is to host a card matching game for Manchester United Fans.
