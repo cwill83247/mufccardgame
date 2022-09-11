@@ -157,7 +157,7 @@ function checkIfMatch () {
         if (score === playerCards.length/2) {    
         console.log("All Cards Matched");   
         modal.style.display = "block"; 
-        modalText.textContent = ("Congratulations -  ALL matched " + score + " pair(s).");
+        modalText.textContent = ("Congratulations -  ALL " + score + " pairs matched ");
         clearInterval(timer);
         
     }
@@ -166,7 +166,7 @@ function checkIfMatch () {
     
    function flipCardsBack() {   
     
-   console.log("I am here in the script");
+   console.log("delayingflippingCardsBack");
    } 
 
 function startNewGame () {  
