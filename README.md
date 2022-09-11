@@ -52,9 +52,9 @@ Mobile view
 •	CSS
 •	Javascript
 
-# Frameworks and Libraries
+# Frameworks and Libraries (UPDATE !!)
 •	Bootstrap v5.1.3: Bootstrap was used to assist with the responsiveness and styling of the website.
-•	Google Fonts: Google fonts were used to import the Prompt font family into the style.css file which is used on all pages throughout the project.
+•	Google Fonts: Google fonts were used to import the Bebas Neueu.
 •	Gitpod: Git add, commit and push commands were used to maintain version control.
 •	GitHub: was used as my online repository to score code, commit messages and versioning
 •	GitHub Pages: was used to deploy my live site, and host my site
