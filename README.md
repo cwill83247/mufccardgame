@@ -2,7 +2,7 @@
 
 # Purpose
 The purpose of this site, is to host a card matching game for Manchester United Fans.
-It is intended to demonstrate some of the skills I have learnt, in HTML,CSS, and Javascript to mee the criteria of milestone 2
+It is intended to demonstrate some of the skills I have learnt, in HTML,CSS, and Javascript to meet the criteria of milestone 2
 Live Site
 Link here
 
