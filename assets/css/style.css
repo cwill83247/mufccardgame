@@ -2,12 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&display=swap');
 
 
-*{                     /**used to reset margins and padding **/
+*{                     
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-
+/** banner and logo **/
 .banner {
     background: #d7172f;
     background: #d7172f;
@@ -19,7 +19,6 @@
 .logo {
     margin: auto;
     display: block;
-    /**margin-top: -50px; **/
     filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
     
 }
@@ -41,14 +40,11 @@ font-size:6rem;
 filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
 }
 
-body {
-    /**height : 100vh;  /**100% of available height **/
-    background-color: #DA291C; /** man utd RED color **/
-    /**display:flex;   **/
+/** main instructions and game play area **/
+body {    
+    background-color: #DA291C;     
 }
-/**7/9/2022   game-area {
-    background-color: aqua;
-}**/
+
 #instructions-area p{
     padding:0.5 rem;
     margin: 10px;
@@ -57,7 +53,6 @@ body {
 #start-game-text {
     padding:3.5rem;
     margin-left:1rem;  
-    /**margin-right:auto; **/ 
     color:white;
     display: flex;
     flex-direction:column; 
@@ -70,11 +65,9 @@ body {
 
 #card-game-area {
     display: grid;
-    grid-template-columns: repeat(4,auto); /**changed to auto 7/9/2022 **/
+    grid-template-columns: repeat(4,auto); 
     grid-template-rows: repeat(3,auto);
     grid-column-gap: 2px;
-    /**margin:1px; **/
-    /**border:1px solid antiquewhite;   /**TEMP just to show area of card game - need to add border, spacing and styles to EACH Card **/
     z-index:99;  
 }
 
@@ -84,15 +77,21 @@ body {
     background-color: black;
     color:antiquewhite;
     font-family: "Bebas Neue";
-    font-size:1.5rem;   
-       
+    font-size:1.5rem;     
 
 }
-.player-card {  /**add styling to each card **/
+#score-results-area {
+    background-color: #DA291C;
+}
+#how-to-play {
+    background-color: #DA291C;
+}
+
+/**add styling to each card, card is added via JavaScript" **/
+.player-card {  
     width:100%;
     height:100%;
     border:1.5px solid black;
-    transform-style:preserve-3d; /**??? ***/ 
     border-radius: 25px;
     background: #DA291C;
     padding: 20px;
@@ -109,12 +108,8 @@ img {
 border:1px solid black;
 
 }
-#score-results-area {
-    background-color: #DA291C;
-}
-#how-to-play {
-    background-color: #DA291C;
-}
+
+/**button styling **/
 .button-style {
     padding: 0.15em;
     border-radius: 5px;
@@ -124,7 +119,7 @@ border:1px solid black;
     color: #fefefe;
     
 }
-/**OVERLAY TEXT**/
+/**Overlay text**/
 
 .overlay-text:hover{
     cursor: pointer;
@@ -141,7 +136,7 @@ border:1px solid black;
         font-size:0;
         }
     to {
-        background-color: #DA291C; /**rgba(0,0,0,0.8); **/
+        background-color: #DA291C; 
         font-size:8em;
 
        }
@@ -188,6 +183,8 @@ border:1px solid black;
     text-decoration: none;
     cursor: pointer;
   }
+
+  /**Responsiveness changes for Mobile and Tablet devices **/
 
 @media (max-width :1200px) {
     #card-game-area {
