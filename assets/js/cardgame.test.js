@@ -2,14 +2,11 @@
  * @jest-environment jsdom
  */
 
-
-
 let jestTest;
 let startNewGame;
 let createGameArea;
 let playerScore;
 let score;
-
 
 /**used Mocking to create an simulated environment to test DOM */
  beforeAll(() => {
