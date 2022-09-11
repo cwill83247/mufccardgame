@@ -141,8 +141,9 @@ JS Hint - https://jshint.com/ - only error is related to module.exports as part 
 # Credits
 Reference materials  usee !!!!
 
-Media
 
+Mockup Generator - http://techsini.com/multi-mockup/index.php
+Media
 
 # Acknowledgements
 •	
