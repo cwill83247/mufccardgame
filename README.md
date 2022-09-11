@@ -1,108 +1,165 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome cwill83247,
+Purpose
+The purpose of this site, is to host a card matching game for Manchester United Fans.
+It is intended to demonstrate some of the skills I have learnt, in HTML,CSS, and Javascript to mee the criteria of milestone 2
+Live Site
+Link here
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Match the Players.
+The game is aimed at all fans, particularly the younger generation of fans. They will match pairs of player images based on the club. The players will be past and present stars.
+The idea was inspired by my 10 year old son, who is a Manchester Untied Fan. He selected the players to be included in the game, and was my main tester from a User Experience perspective. 
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+User Experience Design
+First Time Visitor Goals
+•	As a first time user I need to quickly and easily understand the purpose of the site.
+•	As a first time user I need to be able to understand how to play the game.
+•	As a first time user I need to be able to view the website clearly on both tablet and mobile, as well as desktop.
+•	As a first time user I need to be able to easily play the game, through responsive design.
+•	As a first time user I need to be able to find the game intuitive.
+•	As a first time user I need to have feedback on how I have done in the game.
+Returning Visitor Goals
+•	As a returning visitor I want to be able to start the game quickly
+•	As a returning visitor I want to find the game equally challenging
 
-## Gitpod Reminders
+Design
+Structure
+The page will have the Manchester United crest at the top of the page in a header div, which will clearly show users the page is about Manchester United. Heading 1 will be under the crest, and display the name of the game.  The left hand block will contain instructions explaining the purpose of the game and how to play the game. It will also contain timer, score information, and buttons to start a new game, and restart the canvas. The right hand block will initially display with start game text, this is so the user has time to read instructions, rather than the game start once the page has loaded. On clicking start the card game area will display 12 cards and the timer countdown will begin. The score count will update as pairs of games are matched, and provide the user with an indication of how they are doing. 
+Initial design Experience
+The page has been designed to initially ensure the focus is on what the game is about. By using the Manchester United crest clearly at the top of the page, and the theme uses the Manchester United colours. I hav einentionally not start the gam eon load, so the user is initially drawn to my left block, so they to read the instructions on game play, when they are happy they can click start on the right block, or below the left block. The cards display initially showing the Manchester United crest to further enhance the purpose of the game.
+Colour Scheme (CHANGE !!!)
+The colours I intend to use for the site are Red (rgbn255,0,0) and black (rgb 0,0,0). This will fit in well with the club's existing team colours, and will immediately be recognised by the young fans playing the game.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
+ 
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+The red colour was at a later stage amended to #d7172f which is slightly more in tune with the clubs current brand identity.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
 
-A blue button should appear to click: _Make Public_,
+Typography (change)
+The logo will be made up of a title block which incorporates the clubs badge. The badge will be a link to their existing website.
+•	Prompt (Including all font weights) A sans-serif font which will easily fit into the clubs existing brand styling.
+Images
+The images used in the site, are of Manchester United Players, past and present as selected by my 10 year old son. These are players young and old will recognise. The Main Logo is the Manchester United crest which is the identity of the club. The images used were under creative commons license.
+Responsiveness 
+The game is intended to be quick ,and fun for all users, on desktop, Tablet or Mobile. The design responds to varying screen sizes, and devices, changing the layout appropriately to ensure its playable on all device formats. The blocks will stack on top of each other for tablet and mobile to ensure more user friendly when they don’t have suitable screen sizes. It has been tested manually, and by viewing via Google chrome > inspect option.
+Future developments
+•	Rather than have 6 images, would like a bank of 50 images with 6 getting randomly  selected each time a game starts.
+•	At the end of the game provide some fact or statistic about Manchester United.
+•	Create levels of difficulty, either by having less time to match, or the images are harder to make a match.
 
-Another blue button should appear to click: _Open Browser_.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+Wireframes
+Desktop view  
+Tablet view 
+Mobile view 
 
-To log into the Heroku toolbelt CLI:
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+Technologies used
+•	HTML
+•	CSS
+•	Javascript
+Frameworks and Libraries
+•	Bootstrap v5.1.3: Bootstrap was used to assist with the responsiveness and styling of the website.
+•	Google Fonts: Google fonts were used to import the Prompt font family into the style.css file which is used on all pages throughout the project.
+•	Gitpod: Git add, commit and push commands were used to maintain version control.
+•	GitHub: was used as my online repository to score code, commit messages and versioning
+•	GitHub Pages: was used to deploy my live site, and host my site
+•	Balsamiq: Balsamiq was used to create the wireframes during the design process.
+•	Chrome developer tools: Was used to inspect code, use of console was used to debug code, screen options were used to test on different screen sizes, different devices.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
 
-------
+Deployment
+Forking the GitHub Repository
+By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
+Log in to GitHub and locate the GitHub Repository. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button. You should now have a copy of the original repository in your GitHub account.
+Making a Local Clone
+Log in to GitHub and locate the GitHub Repository. Under the repository name, click "Clone or download". To clone the repository using HTTPS, under "Clone with HTTPS", copy the link. Open Git Bash. Change the current working directory to the location where you want the cloned directory to be made. Type git clone, and then paste the URL you copied.
+Github Pages
+1.	Log in to GitHub and locate the GitHub Repository.
+2.	At the top of the Repository locate the "Settings".
+3.	Click on "Pages" will open "GitHub Pages" Section.
+4.	Under "Source", click the dropdown called "None" and select "Main Branch".
+5.	The page will automatically refresh.
+6.	At the top near github header to locate the now published site link
 
-## Release History
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+Testing
+The Lighthouse, W3C Markup Validator, JSHint and the Lighthouse report were used to determine whether there were any errors in the code.
+•	W3C Markup Validator
+•	W3C CSS Validator
+•	Lighthouse report
+•	JS Hint
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+Testing User Stories from UX Section
+•	First time visitor goals
+•	As a first time user I need to quickly and easily understand the purpose of the site.
+o	The theme of the site is easily identifiable, and the instructions are clearly displayed, the design is clean and simple with focus on the users experience.
+•	As a first time user I need to be able to understand how to play the game.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+o	The instructions are clearly displayed, and when the page initially loads the focus is on the instructions rather than the game.
+•	As a first time user I need to be able to view the website clearly on both tablet and mobile, as well as desktop.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+o	The game is easy to play on all screen sizes, and devices ensuring it is enjoyable to play.
+•	As a first time user I need to be able to find the game intuitive.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+o	The game is very intuitive, it is clear it is about Manchester United, and the aim of the game is to match players. Feedback is good from the game.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+•	As a first time user I need to have feedback on how I have done in the game.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+o	The game clearly shows the counter, counting down, the number of cards matched and at the end of the game provided information on how I have done.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+•	Returning Visitor Goals
+•	As a returning visitor I want to be able to start the game quickly
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+o	New game options, and restart options are clearly visible.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+•	As a returning visitor I want to find the game equally challenging
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+o	The cards are always displayed in random positions, so its always equally challenging.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
 
-------
+Errors and Bugs
+•	When the page loaded the game started straight away not giving the user time to read the instructions. I resolved this by adding a html element that loads initially, and then on clicking start game changes to display the cards.
+•	My Son identified that he could double click on a card and it would then match, leaving us then with odd numbers, and not making game very enjoyable.  I resolved this by adding an if statement to check if the id’s matched then not allow the match to take place. 
+•	During testing I also identified that if no match the 2nd card didn’t display the image, it effectively flipped back immediately. I used setTimout to briefly show both cards, before flipping back.
+•	There is a bug in the game currently, where if you click on the cards too quickly, it breaks the game and the cards do not match anymore. In the future this will be something that I would need to look at and rectify.
 
-## FAQ about the uptime script
 
-**Why have you added this script?**
+Further Testing
+•	The Javascript was run through JSHint to ensure correct
+•	CSS was run through XXXXX
+•	HTML was run through XXXX
+•	Test script was created and run, using JEST to test some of the functionality as part of TDD principal.
+•	Manual testing was carried out, against my user stories.
+•	 Family members tested the game, and gave me feedback. 
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
 
-**How will this affect me?**
+Credits
+Code
+I was helped with this project by watching various javascript tutorials, which enabled me to build the various functions needed for this game. These were:
+•	Learn JavaScript by Building 7 Games - Full Course link
+•	How To Code A Card Game In Plain JavaScript - Spooky Halloween Edition link
+•	Awesome Vanilla JavaScript Memory Card Game Tutorial Link
+•	Memory Card Game - JavaScript Tutorial Link
+•	Overlay creation Link
+•	Help with JEST testing Link
+Media
+The following images were used in the project:
+•	The player images that were used for the cards were all taken from the photos section of the clubs Facebook page link
+•	The image of the back of the cards was taken from Sport Playslist link
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+Acknowledgements
+•	Bootstrap Library used in project mainly to make site responsive.
+•	Images used in readme were screen shot from W3 Validators and Am I Responsive.
+•	Stack Overflow for advice and help regarding JEST testing.
+•	Prompt font supplied by Google Fonts
+•	My Mentor Chris Quinn for continuous helpful feedback.
+•	Slack community for helpful advice.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
 
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
