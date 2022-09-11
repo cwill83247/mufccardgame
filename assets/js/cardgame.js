@@ -23,7 +23,6 @@ function decreaseCounter(){
     if (countdownTimer < 0) {         
         clearInterval(timer); 
         countdownElement.textContent = ("Sorry you have run out of time");  
-        elGameFinishedText.classList.add("visible");      
         modal.style.display = "block";  
         modalText.textContent = ("Sorry you have run out of time, you matched " + score + " pair(s).");
      
@@ -174,7 +173,7 @@ function startNewGame () {
     gameArea.innerHTML = "";  
     score = 0;
     scoreCount.innerHTML ="";  
-    countdownTimer = 60;    
+    countdownTimer = 10;    
     timer = setInterval(decreaseCounter, 1000); 
     createGameArea();
     return score;
