@@ -55,7 +55,7 @@ https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&display=swap
 The images used in the site, are of Manchester United Players, past and present as selected by my 10 year old son.
  These are players young and old fans  will recognise. The Main Logo is the Manchester United crest which is the identity of the club. 
  
- The images used were obtained from google images, unfortunatley due to the nature of football, none of these images were available under creative commons license. If this was a site, intended for wider consumption , then would nee dot purchase image rights via a site such as shutterstock.com 
+ The images used were obtained from google images, unfortunatley due to the nature of football, none of these images were available under creative commons license. If this was a site, intended for wider consumption , then would need to purchase image rights via a site such as shutterstock.com 
 
 # Responsiveness 
 The game is intended to be quick ,and fun for all users, on desktop, Tablet or Mobile. 
