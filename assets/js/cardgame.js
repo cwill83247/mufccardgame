@@ -23,6 +23,7 @@ function decreaseCounter(){
         countdownElement.textContent = ("Sorry you have run out of time");  
         modal.style.display = "block";  
         modalText.textContent = ("Sorry you have run out of time, you matched " + score + " pair(s).");
+        gameArea.innerHTML = "";  //14/9/ trying to stop game 
      
      }     
 }
@@ -114,10 +115,14 @@ function turnCard() {
     const selectedCardId = this.getAttribute("card-id");           
     console.log (playerCards[selectedCardId].playerName);    
     selectedCards.push(playerCards[selectedCardId].playerName);           
-    selectedCardsId.push(selectedCardId);            
+    selectedCardsId.push(selectedCardId); 
+    
+    if (selectedCards.length <=2) {
     this.setAttribute("src",playerCards[selectedCardId].playerImage);   
-       
-    if (selectedCards.length ==2){          
+      
+    }
+
+    if (selectedCards.length == 2){          
         setTimeout(checkIfMatch, 600);              
     } 
 }
