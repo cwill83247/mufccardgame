@@ -46,7 +46,7 @@ The game is intended to be quick ,and fun for all users, on desktop, Tablet or M
 # Wireframes
 ![Desktop Wireframe](https://github.com/cwill83247/mufccardgame/blob/main/assets/images/desktop-wireframe.png)
 ![Tablet Wireframe](https://github.com/cwill83247/mufccardgame/blob/main/assets/images/tablet-wireframe.png)
-![Mobile Wireframe](https://github.com/cwill83247/mufccardgame/blob/main/assets//mobile-wireframe.png)
+![Mobile Wireframe](https://github.com/cwill83247/mufccardgame/blob/main/assets/mobile-wireframe.png)
 
 
 # Technologies used
@@ -80,72 +80,86 @@ Log in to GitHub and locate the GitHub Repository. Under the repository name, cl
 
 
 # Testing Tools
-The Lighthouse, W3C Markup Validator, JSHint and the Lighthouse report were used to determine whether there were any errors in the code.
-•	W3C Markup Validator
-•	W3C CSS Validator
-•	Lighthouse report
-•	JS Hint
+The Lighthouse, W3C Markup Validator, JSHint and the Lighthouse report were used to determine whether there were any errors in the code. I ensured standards were met in design, and also accessebility.
+
+-	W3C Markup Validator
+-	W3C CSS Validator
+-	Lighthouse report
+-	JS Hint
+
+![CSS Validation](https://github.com/cwill83247/mufccardgame/blob/main/assets/images/W3C_WSSValidation_pass.PNG)
+![CSS Validation](https://github.com/cwill83247/mufccardgame/blob/main/assets/images/W3C_WSSValidation_pass.PNG)
 
 # Testing User Stories from UX Section
-•	First time visitor goals
-•	As a first time user I need to quickly and easily understand the purpose of the site.
+##	First time visitor goals
+- As a first time user I need to quickly and easily understand the purpose of the site.
 o	The theme of the site is easily identifiable, and the instructions are clearly displayed, the design is clean and simple with focus on the users experience.
-•	As a first time user I need to be able to understand how to play the game.
 
+-	As a first time user I need to be able to understand how to play the game.
 o	The instructions are clearly displayed, and when the page initially loads the focus is on the instructions rather than the game.
-•	As a first time user I need to be able to view the website clearly on both tablet and mobile, as well as desktop.
 
+-	As a first time user I need to be able to view the website clearly on both tablet and mobile, as well as desktop.
 o	The game is easy to play on all screen sizes, and devices ensuring it is enjoyable to play.
-•	As a first time user I need to be able to find the game intuitive.
 
-o	The game is very intuitive, it is clear it is about Manchester United, and the aim of the game is to match players. Feedback is good from the game.
+- As a first time user I need to be able to find the game intuitive.
+	The game is very intuitive, it is clear it is about Manchester United, and the aim of the game is to match players. Feedback is good from the game.
 
-•	As a first time user I need to have feedback on how I have done in the game.
-
+- As a first time user I need to have feedback on how I have done in the game.
 o	The game clearly shows the counter, counting down, the number of cards matched and at the end of the game provided information on how I have done.
 
-•	Returning Visitor Goals
-•	As a returning visitor I want to be able to start the game quickly
+##Returning Visitor Goals
 
+- As a returning visitor I want to be able to start the game quickly
 o	New game options, and restart options are clearly visible.
 
-•	As a returning visitor I want to find the game equally challenging
-
+- As a returning visitor I want to find the game equally challenging
 o	The cards are always displayed in random positions, so its always equally challenging.
 
 
 # Errors and Bugs
-•	When the page loaded the game started straight away not giving the user time to read the instructions. I resolved this by adding a html element that loads initially, and then on clicking start game changes to display the cards.
-•	My Son identified that he could double click on a card and it would then match, leaving us then with odd numbers, and not making game very enjoyable.  I resolved this by adding an if statement to check if the id’s matched then not allow the match to take place. 
-•	During testing I also identified that if no match the 2nd card didn’t display the image, it effectively flipped back immediately. I used setTimout to briefly show both cards, before flipping back.
-•	There is a bug in the game currently, where if you click on the cards too quickly, it breaks the game and the cards do not match anymore. In the future this will be something that I would need to look at and rectify.
+-When the page loaded the game started straight away not giving the user time to read the instructions. I resolved this by adding a html element that loads initially, and then on clicking start game changes to display the cards.
+
+- My Son identified that he could double click on a card and it would then match, leaving us then with odd numbers, and not making game very enjoyable.  I resolved this by adding an if statement to check if the id’s matched then not allow the match to take place. 
+
+- During testing I also identified that if no match the 2nd card didn’t display the image, it effectively flipped back immediately. I used setTimout to briefly show both cards, before flipping back.
+
+- There is a bug in the game currently, where if you click on the cards too quickly, it breaks the game and the cards do not match anymore. In the future this will be something that I would need to look at and rectify.
 
 
 # Further Testing
-•	The Javascript was run through JSHint to ensure correct with no coding issues
-•	CSS was run through W3C Validation, and sucesfulyl passed
-•	HTML was run through W3C vlaidation, and passed with no errros 
-•	Test script was created and run, using JEST to test some of the functionality as part of TDD principal.
-•	Manual testing was carried out, against my user stories.
-•	 Family members tested the game, and gave me feedback. 
+- The Javascript was run through JSHint to ensure correct with no coding issues
+- CSS was run through W3C Validation, and sucesfulyl passed
+- HTML was run through W3C vlaidation, and passed with no errros 
+- Test script was created and run, using JEST to test some of the functionality as part of TDD principal.
+- Manual testing was carried out, against my user stories.
+- Family members tested the game, and gave me feedback. 
 
-alidation
+Validation
 
-HTML - Validator used - https://validator.w3.org/ Passes all test
+- HTML - Validator used - https://validator.w3.org/ Passes all test
 
-Accessibility - Lighthouse Viewer chrome developer tools - https://developers.google.com/web/tools/lighthouse page achieve 91%
+- Accessibility - Lighthouse Viewer chrome developer tools - https://developers.google.com/web/tools/lighthouse page achieve 91%
 
-CSS - Jigsaw W3C Validator CSS - https://jigsaw.w3.org/css-validator/ This document validates as CSS level 3 + SVG !
+- CSS - Jigsaw W3C Validator CSS - https://jigsaw.w3.org/css-validator/ This document validates as CSS level 3 + SVG !
 
-JS Hint - https://jshint.com/ - only error is related to module.exports as part of JEST testing and doesnt effect game play.
-
+- JS Hint - https://jshint.com/ - only error is related to module.exports as part of JEST testing and doesnt effect game play.
 
 # Credits
-Reference materials  usee !!!!
+## Images
+
+- Ronaldo -  https://bleacherreport.com/articles/10012193-cristiano-ronaldo-scores-brace-in-triumphant-manchester-united-return
+- Casameiro - https://www.news.ro/sport/acord-intre-real-madrid-si-manchester-united-pentru-casemiro-1922404219182022082220825174
+- Sancho - https://www.caughtoffside.com/2021/09/30/sancho-stats-for-man-united/
+- Rooney - https://www.premierleague.com/video/single/1053627
+- Scholes - https://www.pinterest.co.uk/pin/300615343849672341/
+- Fernandes - https://www.manutd.com/en/news/detail/bruno-fernandes-exclusive-interview-before-psg-v-man-utd-on-20-october-2020
+
+It is recogonised due to the commercial value of Manchester United, its players and sponsors, that if this site was intended for a wider audience then images would need to be purchased with the correct licensing. 
+
 
 
 Mockup Generator - http://techsini.com/multi-mockup/index.php
-Media
+
 
 # Acknowledgements
 •	
