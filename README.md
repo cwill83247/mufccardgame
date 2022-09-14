@@ -79,6 +79,9 @@ Making a Local Clone
 Log in to GitHub and locate the GitHub Repository. Under the repository name, click "Clone or download". To clone the repository using HTTPS, under "Clone with HTTPS", copy the link. Open Git Bash. Change the current working directory to the location where you want the cloned directory to be made. Type git clone, and then paste the URL you copied.
 
 ## Github Pages
+
+Deploying site so live using GitHub Pages
+
 1.	Log in to GitHub and locate the GitHub Repository.
 2.	At the top of the Repository locate the "Settings".
 3.	Click on "Pages" will open "GitHub Pages" Section.
@@ -102,27 +105,28 @@ The Lighthouse, W3C Markup Validator, JSHint and the Lighthouse report were used
 # Testing User Stories from UX Section
 ##	First time visitor goals
 - As a first time user I need to quickly and easily understand the purpose of the site.
-o	The theme of the site is easily identifiable, and the instructions are clearly displayed, the design is clean and simple with focus on the users experience.
+--	The theme of the site is easily identifiable, and the instructions are clearly displayed, the design is clean and simple with focus on the users experience.
 
 -	As a first time user I need to be able to understand how to play the game.
-o	The instructions are clearly displayed, and when the page initially loads the focus is on the instructions rather than the game.
-
+--	The instructions are clearly displayed, and when the page initially loads the focus is on the instructions rather than the game.
+![how to play](https://github.com/cwill83247/mufccardgame/blob/main/assets/images/howtoplay.PNG)
 -	As a first time user I need to be able to view the website clearly on both tablet and mobile, as well as desktop.
-o	The game is easy to play on all screen sizes, and devices ensuring it is enjoyable to play.
+--	The game is easy to play on all screen sizes, and devices ensuring it is enjoyable to play.
 
 - As a first time user I need to be able to find the game intuitive.
-	The game is very intuitive, it is clear it is about Manchester United, and the aim of the game is to match players. Feedback is good from the game.
-
+-- The game is very intuitive, it is clear it is about Manchester United, and the aim of the game is to match players. Feedback is good from the game.
+![game area](https://github.com/cwill83247/mufccardgame/blob/main/assets/images/gamearea.PNG)
 - As a first time user I need to have feedback on how I have done in the game.
-o	The game clearly shows the counter, counting down, the number of cards matched and at the end of the game provided information on how I have done.
-
+-- The game clearly shows the counter, counting down, the number of cards matched and at the end of the game provided information on how I have done.
+![timer and score](https://github.com/cwill83247/mufccardgame/blob/main/assets/images/timer and score.PNG)
+![modal](https://github.com/cwill83247/mufccardgame/blob/main/assets/images/modalpopup.PNG)
 ## Returning Visitor Goals
 
 - As a returning visitor I want to be able to start the game quickly
-o	New game options, and restart options are clearly visible.
+-- New game options, and restart options are clearly visible.
 
 - As a returning visitor I want to find the game equally challenging
-o	The cards are always displayed in random positions, so its always equally challenging.
+-- The cards are always displayed in random positions, so its always equally challenging.
 
 # Further Testing
 - The Javascript was run through JSHint to ensure correct with no coding issues
