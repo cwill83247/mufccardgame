@@ -1,27 +1,28 @@
-#Match the Players
+# Match the Players
 ![MUFC - Match the Players screen mockups](https://github.com/cwill83247/mufccardgame/blob/main/assets/images/mufcGame_mockup.PNG)
 
 # Purpose
 The purpose of this site, is to host a card matching game for Manchester United Fans.
 It is intended to demonstrate some of the skills I have learnt, in HTML,CSS, and Javascript to meet the criteria of milestone 2
-Live Site
-Link here
 
-# Match the Players.
 The game is aimed at all fans, particularly the younger generation of fans. They will match pairs of player images based on the club. The players will be past and present stars.
 The idea was inspired by my 10 year old son, who is a Manchester Untied Fan. He selected the players to be included in the game, and was my main tester from a User Experience perspective. 
 
+# Live Site
+The live site is published here using github pages - https://cwill83247.github.io/mufccardgame/
+
 # User Experience Design
 First Time Visitor Goals
-•	As a first time user I need to quickly and easily understand the purpose of the site.
-•	As a first time user I need to be able to understand how to play the game.
-•	As a first time user I need to be able to view the website clearly on both tablet and mobile, as well as desktop.
-•	As a first time user I need to be able to easily play the game, through responsive design.
-•	As a first time user I need to be able to find the game intuitive.
-•	As a first time user I need to have feedback on how I have done in the game.
+-	As a first time user I need to quickly and easily understand the purpose of the site.
+-	As a first time user I need to be able to understand how to play the game.
+-	As a first time user I need to be able to view the website clearly on both tablet and mobile, as well as desktop.
+-	As a first time user I need to be able to easily play the game, through responsive design.
+-	As a first time user I need to be able to find the game intuitive.
+-	As a first time user I need to have feedback on how I have done in the game.
+
 Returning Visitor Goals
-•	As a returning visitor I want to be able to start the game quickly
-•	As a returning visitor I want to find the game equally challenging
+-	As a returning visitor I want to be able to start the game quickly
+-	As a returning visitor I want to find the game equally challenging
 
 # Design
 ## Structure
@@ -43,7 +44,9 @@ The game is intended to be quick ,and fun for all users, on desktop, Tablet or M
 •	Create levels of difficulty, either by having less time to match, or the images are harder to make a match.
 
 # Wireframes
-!https://github.com/cwill83247/mufccardgame/blob/main/assets/images/mufcGame_mockup.PNG
+![Desktop Wireframe](https://github.com/cwill83247/mufccardgame/blob/main/assets/images/desktop-wireframe.png)
+![Tablet Wireframe](https://github.com/cwill83247/mufccardgame/blob/main/assets/images/tablet-wireframe.png)
+![Mobile Wireframe](https://github.com/cwill83247/mufccardgame/blob/main/assets//mobile-wireframe.png)
 
 
 # Technologies used
