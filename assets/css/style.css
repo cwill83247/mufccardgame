@@ -197,10 +197,4 @@ border:1px solid black;
     
     
 }
-@media (max-width :760px) {
-    .player-card {  
-        width:50%;
-        height:50%;
-    }
 
-}
