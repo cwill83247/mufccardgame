@@ -194,5 +194,9 @@ border:1px solid black;
     #card-game-area {
         grid-template-columns: repeat(2, auto);
     }
+    .player-card {  
+        width:20px;
+        height:30px;
+    }
     
 }
