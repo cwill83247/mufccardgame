@@ -52,7 +52,10 @@ https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&display=swap
 
 
 ## Images
-The images used in the site, are of Manchester United Players, past and present as selected by my 10 year old son. These are players young and old will recognise. The Main Logo is the Manchester United crest which is the identity of the club. The images used were obtained from google images, unfortunatley due to the nature of football, none of these images were available under creative commons license. If this was a site, intended for wider consumption , then would nee dot purchase image rights via a site such as shutterstock.com 
+The images used in the site, are of Manchester United Players, past and present as selected by my 10 year old son.
+ These are players young and old fans  will recognise. The Main Logo is the Manchester United crest which is the identity of the club. 
+ 
+ The images used were obtained from google images, unfortunatley due to the nature of football, none of these images were available under creative commons license. If this was a site, intended for wider consumption , then would nee dot purchase image rights via a site such as shutterstock.com 
 
 # Responsiveness 
 The game is intended to be quick ,and fun for all users, on desktop, Tablet or Mobile. 
@@ -72,14 +75,7 @@ The blocks will stack on top of each other for tablet and mobile to ensure more 
 
 
 # Deployment
-## Forking the GitHub Repository
-By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
-Log in to GitHub and locate the GitHub Repository. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button. You should now have a copy of the original repository in your GitHub account.
-Making a Local Clone
-Log in to GitHub and locate the GitHub Repository. Under the repository name, click "Clone or download". To clone the repository using HTTPS, under "Clone with HTTPS", copy the link. Open Git Bash. Change the current working directory to the location where you want the cloned directory to be made. Type git clone, and then paste the URL you copied.
-
 ## Github Pages
-
 Deploying site so live using GitHub Pages
 
 1.	Log in to GitHub and locate the GitHub Repository.
@@ -90,6 +86,13 @@ Deploying site so live using GitHub Pages
 6.	At the top near github header to locate the now published site link
 7. The link can sometime take a while for your site to be live initally so give it 15 minutes and then use the link to see your deployed site.
 
+## Cloning GitHub Repository
+1. Log in to GitHub and locate the GitHub Repository. 
+2. Under the repository name, click "Clone or download". 
+3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link. 
+4. Open Git Bash. 
+5. Change the current working directory to the location where you want the cloned directory to be made. 
+6. Type git clone, and then paste the URL you copied.
 
 # Testing Tools
 The Lighthouse, W3C Markup Validator, JSHint and the Lighthouse report were used to determine whether there were any errors in the code. I ensured standards were met in design, and also accessebility.
