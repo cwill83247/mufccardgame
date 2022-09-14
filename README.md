@@ -83,11 +83,12 @@ Log in to GitHub and locate the GitHub Repository. Under the repository name, cl
 Deploying site so live using GitHub Pages
 
 1.	Log in to GitHub and locate the GitHub Repository.
-2.	At the top of the Repository locate the "Settings".
+2.	Locate the "Settings" option (top of the page).
 3.	Click on "Pages" will open "GitHub Pages" Section.
 4.	Under "Source", click the dropdown called "None" and select "Main Branch".
 5.	The page will automatically refresh.
 6.	At the top near github header to locate the now published site link
+7. The link can sometime take a while for your site to be live initally so give it 15 minutes and then use the link to see your deployed site.
 
 
 # Testing Tools
@@ -150,7 +151,7 @@ Testing has been a continous process, after every commit, the code was tested to
 
 - It wasnt very clear when the game had ended for the user i.e they had matched all cards, or time had run out - this was resolved with the use of a modal to overlay the card area, and prpvide feedback to the users.
 
-- Responsiveness provided several challenges, as wanted cards to remanin responsive. I used the grid layout to cut down the number of cards shown as the screen size decreased.
+- Responsiveness provided several challenges, as wanted cards to remain responsive. I used the grid layout to cut down the number of cards shown as the screen size decreased.
 
 # Validation
 
@@ -195,7 +196,10 @@ It is recognised due to the commercial value of Manchester United, its players a
 ## Spence Bariball (Mentor)
 Helping to keep me motivated, and being supportive when felt overwhelmed. Giving great advice, and suggesting workarounds/solutions to issues.
 
-## Sean and John - Tutopr Assistance
+## CYC-Apr-2022 Slack group
+For generally keeping me in a good headspace.
+
+## Sean and John - Tutor Assistance
 Helping me with JEST, and in particular issues was having when testing elements that get created/updated in the DOM
 
 ## Ania Kubow 
