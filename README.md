@@ -1,4 +1,4 @@
-![Love Labs screen mockups](https://github.com/cwill83247/love-labs-love-food/blob/main/assets/images/lovelabs_mockup.PNG)
+![MUFC - Match the Players screen mockups](https://github.com/cwill83247/mufccardgame/blob/main/assets/images/mufcGame_mockup.PNG)
 
 # Purpose
 The purpose of this site, is to host a card matching game for Manchester United Fans.
