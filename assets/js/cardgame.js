@@ -35,8 +35,8 @@ scoreCount.textContent = score;
 //cards Array 6 unique cards
 const playerCards = [             
     {
-        playerName:"Cantona",
-        playerImage: "assets/images/cantona-card.fw.png",
+        playerName:"Casemiro",
+        playerImage: "assets/images/casemiro-b.jpg",
     },
     {
         playerName:"Rooney",
@@ -47,20 +47,20 @@ const playerCards = [
         playerImage: "assets/images/scholes-card.fw.png",
     },
     {
-        playerName:"Cantona",
-        playerImage: "assets/images/test-card.png",
+        playerName:"Sancho",
+        playerImage: "assets/images/jadon-sancho-mufc-ucl.jpg",
     },
     {
-        playerName:"Cantona",
-        playerImage: "assets/images/test-card.png",
+        playerName:"Ronaldo",
+        playerImage: "assets//images/ronaldo2.jpeg",
     },
     {
-        playerName:"Cantona",
-        playerImage: "assets/images/test-card.png",
+        playerName:"Fernades",
+        playerImage: "assets/images/fernades.jpg",
     },
     {
-        playerName:"Cantona",
-        playerImage: "assets/images/cantona-card.fw.png",
+        playerName:"Casemiro",
+        playerImage: "assets/images/casemiro-b.jpg",
     },
     {
         playerName:"Rooney",
@@ -71,16 +71,16 @@ const playerCards = [
         playerImage: "assets/images/scholes-card.fw.png",
     },
     {
-        playerName:"Cantona",
-        playerImage: "assets/images/test-card.png",
+        playerName:"Sancho",
+        playerImage: "assets/images/jadon-sancho-mufc-ucl.jpg",
     },
     {
-        playerName:"Cantona",
-        playerImage: "assets/images/test-card.png",
+        playerName:"Ronaldo",
+        playerImage: "assets//images/ronaldo2.jpeg",
     },
     {
-        playerName:"Cantona",
-        playerImage: "assets/images/test-card.png",
+        playerName:"Fernades",
+        playerImage: "assets/images/fernades.jpg",
     }
 ]; 
 

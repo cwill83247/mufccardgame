@@ -42,9 +42,7 @@ The game is intended to be quick ,and fun for all users, on desktop, Tablet or M
 •	Create levels of difficulty, either by having less time to match, or the images are harder to make a match.
 
 # Wireframes
-Desktop view  
-Tablet view 
-Mobile view 
+!https://github.com/cwill83247/mufccardgame/blob/main/assets/images/mufcGame_mockup.PNG
 
 
 # Technologies used
