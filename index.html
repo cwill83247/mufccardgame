@@ -15,31 +15,28 @@
     <title>Manchester United - can you match all of the players ?</title>
 </head>
 <body>
- <div class ="container"> 
- <div class="header">
+<div class ="container"> 
+  <div class="header">
           <div class="logo"><img src="assets/images/Manchester_United_FC_crest.svg.png" alt="Manchester United Logo"/></div>
-  <h1 class="title-text">Match the Players</h1>
-</div>
+          <h1 class="title-text">Match the Players</h1>
+  </div>
 
-  <!--11/9/2022<main> -->
-    <section id= "main-content">
-        <div class="row g-5">
-            <div class="col-md-6">  
-    <div id ="instructions-area">
+  <section id= "main-content">
+    <div class="row g-5">
+      <div class="col-md-6">  
+        <div id ="instructions-area">
         <div id="how-to-play"><h1>How to Play</h1></div>
-        <p>
-        Can you match all of the pairs in 60 seconds ? <br>
-       The aim of the game is to match all of the players, within 60 seconds. 
-       In total there are 6 matching pairs.for you to Find <br><br>
+        <p>Can you match all of the pairs in 60 seconds ? <br>
+        The aim of the game is to match all of the players, within 60 seconds. 
+        In total there are 6 matching pairs.for you to Find <br><br>
         Click > START GAME > when you are ready to begin. <br>The timer will start counting down. <br>
         <br>
         You will see players past and present, how many do you recognise? Can you recall any famous moments. Who is your favourite ?
-
         </p> 
         
         <div id="score-results-area">
            
-            <div id ="countdown-timer"><h2><!--Timer part of script will insert here--></h2> </div> 
+          <div id ="countdown-timer"><h2><!--Timer part of script will insert here--></h2> </div> 
             <div id ="score-area"><h2>Cards Matched: </h2><span></span></div>
             <div><button id="new-game" class="button-style" onclick="startNewGame()">New Game</button>  
              <button id="restart-game" class="button-style" onclick="location.reload(true)"><span class="label">Restart</span>
@@ -47,61 +44,51 @@
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path></svg>
               </span>
              </button>    
-            
-            
-            </div>
-
-            
-         </div>
-        </div> 
+          </div>        
         </div>
+      </div> 
+    </div>
         
    <div class="col-md-6">   
        <div id="card-game-area"> 
-                
-                <div id="start-game-text" class="overlay-text visible" onclick="startNewGame()">  <!--<div class="overlay-text visible">-->
-            Start <br> Game
-              <!--Cards getting added here  by JS-->
-        </div>    
-          </div> <!-- added for col-md-6 11/9/2022-->    
-       
-             </div>   
-             </div> <!-- adde dot close row g5-->    
-        <!-- Trigger/Open The Modal W3 Schools -->   
-        
-        <button id="myBtn" hidden>if remove</button>  
-
-            <!-- The Modal -->
-            <div id="myModal" class="modal">
-
-            <!-- Modal content -->
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <div id ="modal-text"></div> 
-                <div> <button id="modal-retry" onclick="location.reload(true)">Retry</button> </div>
-            </div>
-</div>
-        
-              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-              <script src ="assets/js/cardgame.js"></script>
-            <!--11/9/2022</body>   -->
-   </section>  
-<!--- 11/9/2022 </main>   -->
-<div class="container">
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-      <div class="col-md-4 d-flex align-items-center">
-        <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-          <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
-        </a>
-        <span class="mb-3 mb-md-0 text-white">&copy; 2022 Chris Williams - Milestone2 Project</span>
-      </div>
+          <div id="start-game-text" class="overlay-text visible" onclick="startNewGame()">  <!--<div class="overlay-text visible">-->
+           Start <br> Game
+         <!--Cards getting added here  by JS-->
+          </div>    
+        </div>          
+   </div>   
+  </div>   
   
-      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+  <!-- Trigger/Open The Modal W3 Schools -->   
         
-      </ul>
-    </footer>
+  <button id="myBtn" hidden>hidden</button> 
+
+    <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id ="modal-text"></div> 
+      <div> <button id="modal-retry" onclick="location.reload(true)">Retry</button> </div>
+    </div>
   </div>
- </div>
+        
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  <script src ="assets/js/cardgame.js"></script>
+          
+  </section>  
+<div class="container">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+      <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+      <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+      </a>
+      <span class="mb-3 mb-md-0 text-white">&copy; 2022 Chris Williams - Milestone2 Project</span>
+    </div>
+       <ul class="nav col-md-4 justify-content-end list-unstyled d-flex"></ul>
+  </footer>
+</div>
+</div>
 </body>
 </html>
 
