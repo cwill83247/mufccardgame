@@ -118,20 +118,19 @@ The Lighthouse, W3C Markup Validator, JSHint and the Lighthouse report were used
 ![game area](https://github.com/cwill83247/mufccardgame/blob/main/assets/images/gamearea.PNG)
 - As a first time user I need to have feedback on how I have done in the game.
 -- The game clearly shows the counter, counting down, the number of cards matched and at the end of the game provided information on how I have done.
-![timer and score](https://github.com/cwill83247/mufccardgame/blob/main/assets/images/timer and score.PNG)
 ![modal](https://github.com/cwill83247/mufccardgame/blob/main/assets/images/modalpopup.PNG)
 ## Returning Visitor Goals
 
 - As a returning visitor I want to be able to start the game quickly
 -- New game options, and restart options are clearly visible.
-
+![timer and score]("https://github.com/cwill83247/mufccardgame/blob/main/assets/images/timer and score.PNG")
 - As a returning visitor I want to find the game equally challenging
 -- The cards are always displayed in random positions, so its always equally challenging.
 
 # Further Testing
 - The Javascript was run through JSHint to ensure correct with no coding issues
-- CSS was run through W3C Validation, and sucesfulyl passed
-- HTML was run through W3C vlaidation, and passed with no errros 
+- CSS was run through W3C validation, and successfully passed
+- HTML was run through W3C validation, and passed with no errros 
 - Test script was created and run, using JEST to test some of the functionality as part of TDD principal.
 - Manual testing was carried out, against my user stories.
 - Family members tested the game, and gave me feedback. 
@@ -141,11 +140,17 @@ Testing has been a continous process, after every commit, the code was tested to
 # Errors and Bugs
 -When the page loaded the game started straight away not giving the user time to read the instructions. I resolved this by adding a html element that loads initially, and then on clicking start game changes to display the cards.
 
+- Not being able to remove event listeer at appropriate time - added an if statement with the remove event lister as part of script.
+
 - My Son identified that he could double click on a card and it would then match, leaving us then with odd numbers, and not making game very enjoyable.  I resolved this by adding an if statement to check if the id’s matched then not allow the match to take place. 
 
 - During testing I also identified that if no match the 2nd card didn’t display the image, it effectively flipped back immediately. I used setTimout to briefly show both cards, before flipping back.
 
-- There is a bug in the game currently, where if you click on the cards too quickly, it breaks the game and the cards do not match anymore. In the future this will be something that I would need to look at and rectify.
+- Images were displaying a small inserts within the card - this was resolved by changing the padding settigns with the CSS.
+
+- It wasnt very clear when the game had ended for the user i.e they had matched all cards, or time had run out - this was resolved with the use of a modal to overlay the card area, and prpvide feedback to the users.
+
+- Responsiveness provided several challenges, as wanted cards to remanin responsive. I used the grid layout to cut down the number of cards shown as the screen size decreased.
 
 # Validation
 
@@ -187,7 +192,27 @@ It is recognised due to the commercial value of Manchester United, its players a
 
 # Acknowledgements and thanks.
 
+## Spence Bariball (Mentor)
+Helping to keep me motivated, and being supportive when felt overwhelmed. Giving great advice, and suggesting workarounds/solutions to issues.
 
+## Sean and John - Tutopr Assistance
+Helping me with JEST, and in particular issues was having when testing elements that get created/updated in the DOM
+
+## Ania Kubow 
+Fantastic tutorial, and explanations for generating the cards using JavaScript - "Learn JavaScript by Building 7 Games - Full Course"
+https://www.youtube.com/watch?v=ec8vSKJuZTk&t=5449s
+
+## Bobby Hadz
+Excellent explanation in relation to removign event listener, and why may get issues.
+https://bobbyhadz.com/blog/javascript-remove-event-listener-not-working#:~:text=To%20resolve%20the%20removeEventListener%20not,will%20not%20remove%20the%20listener.
+
+## Slack Community
+Had issue/errors when initally testing using JSHINT 
+https://app.slack.com/client/T0L30B202/search/search-eyJkIjoianNsaW50IiwicSI6IlUwM0FTQVFMS1BHIiwiciI6ImpzbGludCJ9/thread/C7HD37Q1F-1628782478.134000
+
+## W3 Schools
+Tutorial showing how to create a modal overlay
+https://www.w3schools.com/howto/howto_css_modals.asp
 
 
 

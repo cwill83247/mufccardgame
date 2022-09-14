@@ -49,10 +49,10 @@ const playerCards = [
     },
     {
         playerName:"Ronaldo",
-        playerImage: "assets//images/ronaldo2.jpeg",
+        playerImage: "assets/images/ronaldo2.jpeg",
     },
     {
-        playerName:"Fernades",
+        playerName:"Fernandes",
         playerImage: "assets/images/fernades.jpg",
     },
     {
@@ -73,10 +73,10 @@ const playerCards = [
     },
     {
         playerName:"Ronaldo",
-        playerImage: "assets//images/ronaldo2.jpeg",
+        playerImage: "assets/images/ronaldo2.jpeg",
     },
     {
-        playerName:"Fernades",
+        playerName:"Fernandes",
         playerImage: "assets/images/fernades.jpg",
     }
 ]; 
