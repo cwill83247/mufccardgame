@@ -173,7 +173,7 @@ function startNewGame () {
     gameArea.innerHTML = "";  
     score = 0;
     scoreCount.innerHTML ="";  
-    countdownTimer = 10;    
+    countdownTimer = 60;    
     timer = setInterval(decreaseCounter, 1000); 
     createGameArea();
     return score;
