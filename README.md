@@ -32,7 +32,7 @@ The colours used in my design were red #DA291C; black (rgba 0,0,0,0), and white 
 ## Typography 
 The font used was from Google fonts - Bebas Neueu, I felt this reglected the brand clearly and matched the identity of Manchester United.
 ## Images
-The images used in the site, are of Manchester United Players, past and present as selected by my 10 year old son. These are players young and old will recognise. The Main Logo is the Manchester United crest which is the identity of the club. The images used were under creative commons license.
+The images used in the site, are of Manchester United Players, past and present as selected by my 10 year old son. These are players young and old will recognise. The Main Logo is the Manchester United crest which is the identity of the club. The images used were obtained from google images, unfortunatley due to the nature of football, none of these images were available under creative commons license. If this was a site, intended for wider consumption , then would nee dot purchase image rights via a site such as shutterstock.com 
 
 # Responsiveness 
 The game is intended to be quick ,and fun for all users, on desktop, Tablet or Mobile. The design responds to varying screen sizes, and devices, changing the layout appropriately to ensure its playable on all device formats. The blocks will stack on top of each other for tablet and mobile to ensure more user friendly when they don’t have suitable screen sizes. It has been tested manually, and by viewing via Google chrome > inspect option.
