@@ -190,11 +190,9 @@ border:1px solid black;
         grid-template-columns: repeat(3, auto);
     }
 }
-@media (max-width :900px) {
-    #card-game-area {
-        grid-template-columns: repeat(2, auto);
-    }
+@media (max-width :540px) {
     
-    
+.modal-content {
+    font-size: 1.5em;
 }
-
+}
