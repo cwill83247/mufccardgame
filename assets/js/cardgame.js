@@ -23,7 +23,7 @@ function decreaseCounter(){
         countdownElement.textContent = ("Sorry you have run out of time");  
         modal.style.display = "block";  
         modalText.textContent = ("Sorry you have run out of time, you matched " + score + " pair(s).");
-        gameArea.innerHTML = "";  //14/9/ trying to stop game 
+        gameArea.innerHTML = "";  
      
      }     
 }
@@ -93,7 +93,6 @@ const cardGameArea = document.querySelector("#card-game-area");
 function playerScore() {
     score = score +1;
     const newScore = score;
-    console.log("new score:"+ newScore);
     document.getElementById("score-area").innerHTML = ("Cards Matched:" +newScore);    
 }
 
@@ -112,8 +111,7 @@ function createGameArea() {
 decreaseCounter(); 
 
 function turnCard() {
-    const selectedCardId = this.getAttribute("card-id");           
-    console.log (playerCards[selectedCardId].playerName);    
+    const selectedCardId = this.getAttribute("card-id");         
     selectedCards.push(playerCards[selectedCardId].playerName);           
     selectedCardsId.push(selectedCardId); 
     
@@ -132,7 +130,6 @@ function checkIfMatch () {
     const cards = document.querySelectorAll("#card-game-area img");  
              
     if((selectedCards[0] == selectedCards[1]) && (selectedCardsId[0] !== selectedCardsId[1])) {  //making sure cant double click to get a score.... 
-        console.log("its a match");
         playerScore();
         cards[selectedCardsId[0]].removeEventListener("click",turnCard); 
         cards[selectedCardsId[1]].removeEventListener("click",turnCard);  
@@ -146,8 +143,7 @@ function checkIfMatch () {
 
         selectedCards =[];                      
         selectedCardsId =[];  
-        console.log (selectedCards);
-
+        
     // checking if all cards have been matched
   
         if (score === playerCards.length/2) {    
